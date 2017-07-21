@@ -3,12 +3,12 @@
         <section class="section">
             <div class="columns">
                 <div class="column is-8 is-offset-2">
-                    <h1 class="title is-1">
-                        {{ companyName }}
-                    </h1>
-                    <h3 class="title is-3">
-                        JavaScript Style Guide
-                    </h3>
+                    <div class="logo-container">
+                        <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
+                        <h3 class="logo-tagline title is-3">
+                            JavaScript Style Guide
+                        </h3>
+                    </div>
                 </div>
             </div>
             <div class="columns">
@@ -52,6 +52,19 @@
     @import "../node_modules/bulma/bulma.sass";
     @import "../node_modules/font-awesome/css/font-awesome.css";
 
+    .logo-container {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            margin-right: 14px;
+        }
+
+        .logo-tagline {
+            margin-top: 10px;
+        }
+    }
+
     .fade-enter-active, .fade-leave-active {
         transition: opacity .25s;
     }
@@ -67,6 +80,7 @@
     }
 
     .fixed-to-top {
+        background: transparent;
         position: fixed;
         bottom: 0;
         right: 0;
