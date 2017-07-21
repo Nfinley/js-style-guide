@@ -40,6 +40,7 @@
             AppHome
         }
     }
+
 </script>
 
 <style lang="scss">
@@ -85,4 +86,5 @@
         bottom: 0;
         right: 0;
     }
+
 </style>
