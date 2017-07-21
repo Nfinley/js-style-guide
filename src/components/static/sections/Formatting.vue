@@ -81,9 +81,9 @@ try {
 // &#8230;
 } catch (e) {}
 </code></pre>
-            <h3 id="formatting-block-indentation">4.2 Block indentation: +2 spaces</h3>
+            <h3 id="formatting-block-indentation">4.2 Block indentation: +{{ indentNumSpaces }} spaces</h3>
             <p>Each time a new block or block-like construct is opened, the indent increases by
-                two spaces. When the block ends, the indent returns to the previous indent
+                {{ indentNumSpaces }} spaces. When the block ends, the indent returns to the previous indent
                 level. The indent level applies to both code and comments throughout the
                 block. (See the example in <a href="#formatting-nonempty-blocks">??</a>).
             </p>
@@ -167,7 +167,7 @@ frobnicate(message) {}
 </code></pre>
             <h4 id="formatting-function-expressions">4.2.4 Function expressions</h4>
             <p>When declaring an anonymous function in the list of arguments for a function
-                call, the body of the function is indented two spaces more than the preceding
+                call, the body of the function is indented {{ indentNumSpaces }} spaces more than the preceding
                 indentation depth.
             </p>
             <p>Example:</p>
@@ -470,7 +470,7 @@ someFunction(obviousParam, true /* shouldRender */, 'hello' /* name */);
         props: ['companyName'],
         data() {
             return {
-                
+                indentNumSpaces: 4
             }
         }
     }
