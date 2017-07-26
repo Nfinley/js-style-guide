@@ -1,7 +1,7 @@
 <template>
-    <div class="react-jsx-container">
+    <div class="react-jsx-standard-container">
         <h2>
-            React / JSX Guide
+            React / JSX Standard
         </h2>
         <h3>
             React

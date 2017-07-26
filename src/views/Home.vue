@@ -5,36 +5,23 @@
         </app-table-of-contents>
         <hr>
         <div id="content">
-            <app-intro
-                :companyName="companyName">
-            </app-intro>
+            <app-intro :companyName="companyName"></app-intro>
             <hr>
-            <app-source-file
-                :companyName="companyName">
-            </app-source-file>
+            <app-source-file></app-source-file>
             <hr>
-            <app-formatting
-                :companyName="companyName">
-            </app-formatting>
+            <app-formatting></app-formatting>
             <hr>
-            <app-language-features
-                :companyName="companyName">
-            </app-language-features>
+            <app-language-features></app-language-features>
             <hr>
-            <app-naming
-                :companyName="companyName">
-            </app-naming>
+            <app-naming></app-naming>
             <hr>
-            <app-react-jsx-guide
-                :companyName="companyName">
-            </app-react-jsx-guide>
-            <app-policies
-                :companyName="companyName">
-            </app-policies>
+            <app-react-jsx-standard></app-react-jsx-standard>
             <hr>
-            <app-appendices
-                :companyName="companyName">
-            </app-appendices>
+            <app-jest-standard></app-jest-standard>
+            <hr>
+            <app-policies></app-policies>
+            <hr>
+            <app-appendices></app-appendices>
         </div>
     </div>
 </template>
@@ -49,7 +36,8 @@
     import AppNaming from '../components/static/sections/Naming.vue'
     import AppPolicies from '../components/static/sections/Policies.vue'
     import AppAppendices from '../components/static/sections/Appendices.vue'
-    import AppReactJsxGuide from '../components/static/sections/ReactJsxGuide.vue'
+    import AppReactJsxStandard from '../components/static/sections/ReactJsxStandard.vue'
+    import AppJestStandard from '../components/static/sections/JestStandard.vue'
 
     export default {
         props: ['companyName'],
@@ -62,7 +50,8 @@
             AppNaming,
             AppPolicies,
             AppAppendices,
-            AppReactJsxGuide
+            AppReactJsxStandard,
+            AppJestStandard
         }
     }
 
