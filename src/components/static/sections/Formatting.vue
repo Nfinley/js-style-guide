@@ -1,6 +1,6 @@
 <template>
     <div class="formatting-container">
-        <h2 id="formatting">4 Formatting</h2>
+        <h2 id="formatting">3 Formatting</h2>
             <p><strong>Terminology Note</strong>: <em>block-like construct</em> refers to the body of a class,
                 function, method, or brace-delimited block of code.  Note that, by
                 <a href="#features-array-literals">??</a> and <a href="#features-object-literals">??</a>, any array or
@@ -11,8 +11,8 @@
                 integration with several popular
                 editors.
             </p>
-            <h3 id="formatting-braces">4.1 Braces</h3>
-            <h4 id="formatting-braces-all">4.1.1 Braces are used for all control structures</h4>
+            <h3 id="formatting-braces">3.1 Braces</h3>
+            <h4 id="formatting-braces-all">3.1.1 Braces are used for all control structures</h4>
             <p>Braces are required for all control structures (i.e. <code>if</code>, <code>else</code>, <code>for</code>, <code>do</code>,
                 <code>while</code>, as well as any others), even if the body contains only a single
                 statement.  The first statement of a non-empty block must begin on its own line.
@@ -30,7 +30,7 @@ for (let i = 0; i &lt; foo.length; i++) bar(foo[i]);
             </p>
             <pre><code class="language-js prettyprint">if (shortCondition()) return;
 </code></pre>
-            <h4 id="formatting-nonempty-blocks">4.1.2 Nonempty blocks: K&amp;R style</h4>
+            <h4 id="formatting-nonempty-blocks">3.1.2 Nonempty blocks: K&amp;R style</h4>
             <p>Braces follow the Kernighan and Ritchie style (<q><a href="http://www.codinghorror.com/blog/2012/07/new-programming-jargon.html">Egyptian brackets</a></q>) for
                 <em>nonempty</em> blocks and block-like constructs:
             </p>
@@ -61,7 +61,7 @@ recover();
 }
 }
 </code></pre>
-            <h4 id="formatting-empty-blocks">4.1.3 Empty blocks: may be concise</h4>
+            <h4 id="formatting-empty-blocks">3.1.3 Empty blocks: may be concise</h4>
             <p>An empty block or block-like construct <em>may</em> be closed immediately after it is
                 opened, with no characters, space, or line break in between (i.e. <code>{}</code>),
                 <strong>unless</strong> it is a part of a <em>multi-block statement</em> (one that directly contains
@@ -81,13 +81,13 @@ try {
 // &#8230;
 } catch (e) {}
 </code></pre>
-            <h3 id="formatting-block-indentation">4.2 Block indentation: +{{ indentNumSpaces }} spaces</h3>
+            <h3 id="formatting-block-indentation">3.2 Block indentation: +{{ indentNumSpaces }} spaces</h3>
             <p>Each time a new block or block-like construct is opened, the indent increases by
                 {{ indentNumSpaces }} spaces. When the block ends, the indent returns to the previous indent
                 level. The indent level applies to both code and comments throughout the
                 block. (See the example in <a href="#formatting-nonempty-blocks">??</a>).
             </p>
-            <h4 id="formatting-array-literals">4.2.1 Array literals: optionally <q>block-like</q></h4>
+            <h4 id="formatting-array-literals">3.2.1 Array literals: optionally <q>block-like</q></h4>
             <p>Any array literal may optionally be formatted as if it were a &#8220;block-like
                 construct.&#8221; For example, the following are all valid (<strong>not</strong> an exhaustive
                 list):
@@ -111,7 +111,7 @@ someMethod(foo, [
                 between elements, but should not be used only to reduce the vertical size of
                 larger arrays.
             </p>
-            <h4 id="formatting-object-literals">4.2.2 Object literals: optionally <q>block-like</q></h4>
+            <h4 id="formatting-object-literals">3.2.2 Object literals: optionally <q>block-like</q></h4>
             <p>Any object literal may optionally be formatted as if it were a &#8220;block-like
                 construct.&#8221; The same examples apply as <a href="#formatting-array-literals">??</a>. For
                 example, the following are all valid (<strong>not</strong> an exhaustive list):
@@ -130,7 +130,7 @@ someMethod(foo, {
   a: 0, b: 1,
 }, bar);
 </code></pre>
-            <h4 id="formatting-class-literals">4.2.3 Class literals</h4>
+            <h4 id="formatting-class-literals">3.2.3 Class literals</h4>
             <p>Class literals (whether declarations or expressions) are indented as blocks. Do
                 not add semicolons after methods, or after the closing brace of a class
                 <em>declaration</em> (statements&#8212;such as assignments&#8212;that contain class <em>expressions</em>
@@ -165,7 +165,7 @@ class Frobnicator {
 frobnicate(message) {}
 }
 </code></pre>
-            <h4 id="formatting-function-expressions">4.2.4 Function expressions</h4>
+            <h4 id="formatting-function-expressions">3.2.4 Function expressions</h4>
             <p>When declaring an anonymous function in the list of arguments for a function
                 call, the body of the function is indented {{ indentNumSpaces }} spaces more than the preceding
                 indentation depth.
@@ -191,7 +191,7 @@ result.use();
 }
 });
 </code></pre>
-            <h4 id="formatting-switch-statements">4.2.5 Switch statements</h4>
+            <h4 id="formatting-switch-statements">3.2.5 Switch statements</h4>
             <p>As with any other block, the contents of a switch block are indented +2.</p>
             <p>After a switch label, a newline appears, and the indentation level is increased
                 +2, exactly as if a block were being opened. An explicit block may be used if
@@ -213,14 +213,14 @@ default:
 throw new Error('Unknown animal');
 }
 </code></pre>
-            <h3 id="formatting-statements">4.3 Statements</h3>
-            <h4 id="formatting-one-statement-perline">4.3.1 One statement per line</h4>
+            <h3 id="formatting-statements">3.3 Statements</h3>
+            <h4 id="formatting-one-statement-perline">3.3.1 One statement per line</h4>
             <p>Each statement is followed by a line-break.</p>
-            <h4 id="formatting-semicolons-are-required">4.3.2 Semicolons are required</h4>
+            <h4 id="formatting-semicolons-are-required">3.3.2 Semicolons are required</h4>
             <p>Every statement must be terminated with a semicolon. Relying on automatic
                 semicolon insertion is forbidden.
             </p>
-            <h3 id="formatting-column-limit">4.4 Column limit: 80</h3>
+            <h3 id="formatting-column-limit">3.4 Column limit: 80</h3>
             <p>JavaScript code has a column limit of 80 characters. Except as noted below, any
                 line that would exceed this limit must be line-wrapped, as explained in
                 <a href="#formatting-line-wrapping">??</a>.
@@ -234,7 +234,7 @@ throw new Error('Unknown animal');
                     <a href="#file-goog-require">??</a>).
                 </li>
             </ol>
-            <h3 id="formatting-line-wrapping">4.5 Line-wrapping</h3>
+            <h3 id="formatting-line-wrapping">3.5 Line-wrapping</h3>
             <p><strong>Terminology Note</strong>: <em>Line-wrapping</em> is defined as breaking a single expression
                 into multiple lines.
             </p>
@@ -249,7 +249,7 @@ throw new Error('Unknown animal');
             <p>Tip: Extracting a method or local variable may solve the problem without the
                 need to line-wrap.
             </p>
-            <h4 id="formatting-where-to-break">4.5.1 Where to break</h4>
+            <h4 id="formatting-where-to-break">3.5.1 Where to break</h4>
             <p>The prime directive of line-wrapping is: prefer to break at a <strong>higher syntactic
                 level</strong>. 
             </p>
@@ -286,7 +286,7 @@ currentEstimate) / 2.0f;
                     necessarily code that fits in the smallest number of lines.
                 </p>
             </blockquote>
-            <h4 id="formatting-indent">4.5.2 Indent continuation lines at least +4 spaces</h4>
+            <h4 id="formatting-indent">3.5.2 Indent continuation lines at least +4 spaces</h4>
             <p>When line-wrapping, each line after the first (each <em>continuation line</em>) is
                 indented at least +4 from the original line, unless it falls under the rules of
                 block indentation.
@@ -299,8 +299,8 @@ currentEstimate) / 2.0f;
             <p><a href="#formatting-horizontal-alignment">??</a> addresses the discouraged practice of
                 using a variable number of spaces to align certain tokens with previous lines.
             </p>
-            <h3 id="formatting-whitespace">4.6 Whitespace</h3>
-            <h4 id="formatting-vertical-whitespace">4.6.1 Vertical whitespace</h4>
+            <h3 id="formatting-whitespace">3.6 Whitespace</h3>
+            <h4 id="formatting-vertical-whitespace">3.6.1 Vertical whitespace</h4>
             <p>A single blank line appears:</p>
             <ol>
                 <li>
@@ -325,7 +325,7 @@ currentEstimate) / 2.0f;
             <p><em>Multiple</em> consecutive blank lines are permitted, but never required (nor
                 encouraged).
             </p>
-            <h4 id="formatting-horizontal-whitespace">4.6.2 Horizontal whitespace</h4>
+            <h4 id="formatting-horizontal-whitespace">3.6.2 Horizontal whitespace</h4>
             <p>Use of horizontal whitespace depends on location, and falls into three broad
                 categories: <em>leading</em> (at the start of a line), <em>trailing</em> (at the end of a
                 line), and <em>internal</em>.  Leading whitespace (i.e., indentation) is addressed
@@ -366,7 +366,7 @@ currentEstimate) / 2.0f;
                     {number} */ (bar);</code> or <code>function(/** string */ foo) {</code>).
                 </li>
             </ol>
-            <h4 id="formatting-horizontal-alignment">4.6.3 Horizontal alignment: discouraged</h4>
+            <h4 id="formatting-horizontal-alignment">3.6.3 Horizontal alignment: discouraged</h4>
             <p><strong>Terminology Note</strong>: <em>Horizontal alignment</em> is the practice of adding a
                 variable number of additional spaces in your code with the goal of making
                 certain tokens appear directly below certain other tokens on previous lines.
@@ -397,7 +397,7 @@ longer: 435, // may leave it unaligned
                 result in pointless busywork, but at best it still corrupts version history
                 information, slows down reviewers and exacerbates merge conflicts.
             </p>
-            <h4 id="formatting-function-arguments">4.6.4 Function arguments</h4>
+            <h4 id="formatting-function-arguments">3.6.4 Function arguments</h4>
             <p>Prefer to put all function arguments on the same line as the function name. If doing so would exceed the 80-column limit, the arguments must be line-wrapped in a readable way. To save space, you may wrap as close to 80 as possible, or put each argument on its own line to enhance readability. Indentation should be four spaces. Aligning to the parenthesis is allowed, but discouraged. Below are the most common patterns for argument wrapping:</p>
             <pre><code class="language-js prettyprint">// Arguments start on a new line, indented four spaces. Preferred when the
 // arguments don't fit on the same line with the function name (or the keyword
@@ -425,7 +425,7 @@ artichokeDescriptorAdapterIterator) {
 // &#8230;
 }
 </code></pre>
-            <h3 id="formatting-grouping-parentheses">4.7 Grouping parentheses: recommended</h3>
+            <h3 id="formatting-grouping-parentheses">3.7 Grouping parentheses: recommended</h3>
             <p>Optional grouping parentheses are omitted only when the author and reviewer
                 agree that there is no reasonable chance that the code will be misinterpreted
                 without them, nor would they have made the code easier to read. It is <em>not</em>
@@ -436,11 +436,11 @@ artichokeDescriptorAdapterIterator) {
                 <code>delete</code>, <code>typeof</code>, <code>void</code>, <code>return</code>, <code>throw</code>, <code>case</code>, <code>in</code>, <code>of</code>, or <code>yield</code>.
             </p>
             <p>Parentheses are required for type casts: <code>/** @type {!Foo} */ (foo)</code>.</p>
-            <h3 id="formatting-comments">4.8 Comments</h3>
+            <h3 id="formatting-comments">3.8 Comments</h3>
             <p>This section addresses <em>implementation comments</em>. JSDoc is addressed separately
                 in <a href="#jsdoc">??</a>.
             </p>
-            <h4 id="formatting-block-comment-style">4.8.1 Block comment style</h4>
+            <h4 id="formatting-block-comment-style">3.8.1 Block comment style</h4>
             <p>Block comments are indented at the same level as the surrounding code. They may
                 be in <code>/* &#8230; */</code> or <code>//</code>-style. For multi-line <code>/* &#8230; */</code> comments, subsequent
                 lines must start with * aligned with the <code>*</code> on the previous line, to make

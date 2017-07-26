@@ -1,17 +1,17 @@
 <template>
     <div class="appendices-container">
-        <h2 id="appendices">9 Appendices</h2>
-        <h3 id="appendices-jsdoc-tag-reference">9.1 JSDoc tag reference</h3>
+        <h2 id="appendices">7 Appendices</h2>
+        <h3 id="appendices-jsdoc-tag-reference">7.1 JSDoc tag reference</h3>
         <p>JSDoc serves multiple purposes in JavaScript.  In addition to being used to
             generate documentation it is also used to control tooling.  The best known are
             the Closure Compiler type annotations.
         </p>
-        <h4 id="appendices-type-annotations">9.1.1 Type annotations and other Closure Compiler annotations</h4>
+        <h4 id="appendices-type-annotations">7.1.1 Type annotations and other Closure Compiler annotations</h4>
         <p>Documentation for JSDoc used by the Closure Compiler is described in
             <a href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure Compiler</a> and <a href="https://github.com/google/closure-compiler/wiki/Types-in-the-Closure-Type-System">Types in the Closure Type
             System</a>.
         </p>
-        <h4 id="appendices-documentation-annotations">9.1.2 Documentation annotations</h4>
+        <h4 id="appendices-documentation-annotations">7.1.2 Documentation annotations</h4>
         <p>In addition to the JSDoc described in <a href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler">Annotating JavaScript for the Closure
             Compiler</a> the following tags are common and well supported by various
             documentation generations tools (such as <a href="https://github.com/jleyba/js-dossier">JsDossier</a>) for purely documentation
@@ -145,7 +145,7 @@ exports.MSG_ACCOUNT_CREATED = goog.getMsg(
             annotations appear in the <a href="http://code.google.com/p/jsdoc-toolkit/wiki/TagReference">JSDoc Toolkit Tag Reference</a> but are not considered
             part of valid {{ companyName }} style.
         </p>
-        <h4 id="appendices-framework-specific-annotations">9.1.3 Framework specific annotations</h4>
+        <h4 id="appendices-framework-specific-annotations">7.1.3 Framework specific annotations</h4>
         <p>The following annotations are specific to a particular framework.
         <table>
             <thead>
@@ -170,7 +170,7 @@ exports.MSG_ACCOUNT_CREATED = goog.getMsg(
             </tbody>
         </table>
         </p>
-        <h4 id="appendices-notes-about-standard-closure-compiler-annotations">9.1.4 Notes about standard Closure Compiler annotations</h4>
+        <h4 id="appendices-notes-about-standard-closure-compiler-annotations">7.1.4 Notes about standard Closure Compiler annotations</h4>
         <p>The following tags used to be standard but are now deprecated.
         <table>
             <thead>
@@ -196,7 +196,7 @@ exports.MSG_ACCOUNT_CREATED = goog.getMsg(
             </tbody>
         </table>
         </p>
-        <h3 id="appendices-commonly-misunderstood-style-rules">9.2 Commonly misunderstood style rules</h3>
+        <h3 id="appendices-commonly-misunderstood-style-rules">7.2 Commonly misunderstood style rules</h3>
         <p>Here is a collection of lesser-known or commonly misunderstood facts about
             {{ companyName }} Style for JavaScript. (The following are true statements; this is not a
             list of <q>myths.</q>)
@@ -220,14 +220,14 @@ exports.MSG_ACCOUNT_CREATED = goog.getMsg(
                 equivalent Unicode escape would (<a href="#non-ascii-characters">??</a>).
             </li>
         </ul>
-        <h3 id="appendices-style-related-tools">9.3 Style-related tools</h3>
+        <h3 id="appendices-style-related-tools">7.3 Style-related tools</h3>
         <p>The following tools exist to support various aspects of {{ companyName }} Style.</p>
-        <h4 id="appendices-tools-closure-compiler">9.3.1 Closure Compiler</h4>
+        <h4 id="appendices-tools-closure-compiler">7.3.1 Closure Compiler</h4>
         <p>This program performs type checking and other checks,
             optimizations and other transformations (such as ECMAScript 6 to ECMAScript 5
             code lowering).
         </p>
-        <h4 id="appendices-clang-format">9.3.2 <code>clang-format</code></h4>
+        <h4 id="appendices-clang-format">7.3.2 <code>clang-format</code></h4>
         <p>This program  reformats
             JavaScript source code into {{ companyName }} Style, and also follows a number of
             non-required but frequently readability-enhancing formatting practices.
@@ -236,11 +236,11 @@ exports.MSG_ACCOUNT_CREATED = goog.getMsg(
             reviewers are allowed to ask for such changes; disputes are worked out in the
             usual way. However, subtrees may choose to opt in to such enforcement locally.
         </p>
-        <h4 id="appendices-closure-compiler-linter">9.3.3 Closure compiler linter</h4>
+        <h4 id="appendices-closure-compiler-linter">7.3.3 Closure compiler linter</h4>
         <p>This program  checks for a
             variety of missteps and anti-patterns.
         </p>
-        <h4 id="appendices-conformance-framework">9.3.4 Conformance framework</h4>
+        <h4 id="appendices-conformance-framework">7.3.4 Conformance framework</h4>
         <p>The JS Conformance Framework is a tool that is part of the Closure Compiler that
             provides developers a simple means to specify a set of additional checks to be
             run against their code base above the standard checks.  Conformance checks can,
@@ -254,8 +254,8 @@ exports.MSG_ACCOUNT_CREATED = goog.getMsg(
         <p>For additional information see the official documentation for the
             <a href="https://github.com/google/closure-compiler/wiki/JS-Conformance-Framework">JS Conformance Framework</a>.
         </p>
-        <h3 id="appendices-legacy-exceptions">9.4 Exceptions for legacy platforms</h3>
-        <h4 id="appendices-legacy-exceptions-overview">9.4.1 Overview</h4>
+        <h3 id="appendices-legacy-exceptions">7.4 Exceptions for legacy platforms</h3>
+        <h4 id="appendices-legacy-exceptions-overview">7.4.1 Overview</h4>
         <p>This section describes exceptions and additional rules to be followed when
             modern ECMAScript 6 syntax is not available to the code authors. Exceptions to
             the recommended style are required when ECMAScript 6 syntax is not possible and
@@ -266,8 +266,8 @@ exports.MSG_ACCOUNT_CREATED = goog.getMsg(
             <li>Use of <code>arguments</code> is allowed</li>
             <li>Optional parameters without default values are allowed</li>
         </ul>
-        <h4 id="appendices-legacy-exceptions-var">9.4.2 Use <code>var</code></h4>
-        <h5 id="appendices-legacy-exceptions-var-scope">9.4.2.1 <code>var</code> declarations are NOT block-scoped</h5>
+        <h4 id="appendices-legacy-exceptions-var">7.4.2 Use <code>var</code></h4>
+        <h5 id="appendices-legacy-exceptions-var-scope">7.4.2.1 <code>var</code> declarations are NOT block-scoped</h5>
         <p><code>var</code> declarations are scoped to the beginning of the nearest enclosing
             function, script or module, which can cause unexpected behavior, especially with
             function closures that reference <code>var</code> declarations inside of loops. The
@@ -282,7 +282,7 @@ setTimeout(function() { console.log(iteration); }, i*1000);
 // because `iteration` is function-scoped, not local to the loop.
 
 </code></pre>
-        <h5 id="appendices-legacy-exceptions-var-declare">9.4.2.2 Declare variables as close as possible to first use</h5>
+        <h5 id="appendices-legacy-exceptions-var-declare">7.4.2.2 Declare variables as close as possible to first use</h5>
         <p>Even though <code>var</code> declarations are scoped to the beginning of the enclosing
             function, <code>var</code> declarations should be as close as possible to their first use,
             for readability purposes. However, do not put a <code>var</code> declaration inside a block
@@ -297,12 +297,12 @@ count++;
 console.log(count + ' items in y');
 }
 </code></pre>
-        <h5 id="appendices-legacy-exceptions-var-const">9.4.2.3 Use @const for constants variables</h5>
+        <h5 id="appendices-legacy-exceptions-var-const">7.4.2.3 Use @const for constants variables</h5>
         <p>For global declarations where the <code>const</code> keyword would be used, if it were
             available, annotate the <code>var</code> declaration with @const instead (this is optional
             for local variables).
         </p>
-        <h4 id="appendices-legacy-exceptions-function">9.4.3 Do not use block scoped functions declarations</h4>
+        <h4 id="appendices-legacy-exceptions-function">7.4.3 Do not use block scoped functions declarations</h4>
         <p>Do <strong>not</strong> do this:</p>
         <pre><code class="language-js prettyprint badcode">if (x) {
 function foo() {}
@@ -322,12 +322,12 @@ function foo() {}
 var foo = function() {};
 }
 </code></pre>
-        <h4 id="appendices-legacy-exceptions-goog-provide">9.4.4 Dependency management with <code>goog.provide</code>/<code>goog.require</code></h4>
+        <h4 id="appendices-legacy-exceptions-goog-provide">7.4.4 Dependency management with <code>goog.provide</code>/<code>goog.require</code></h4>
         <p><strong><code>goog.provide</code> is deprecated. All new files should use <code>goog.module</code>, even in
             projects with existing <code>goog.provide</code> usage. The following rules are for
             pre-existing goog.provide files, only.</strong>
         </p>
-        <h5 id="appendices-legacy-exceptions-goog-provide-summary">9.4.4.1 Summary</h5>
+        <h5 id="appendices-legacy-exceptions-goog-provide-summary">7.4.4.1 Summary</h5>
         <ul>
             <li>Place all <code>goog.provide</code>s first, <code>goog.require</code>s second. Separate provides
                 from requires with an empty line.
@@ -382,7 +382,7 @@ goog.provide('namespace.MyClass.staticMethod');
 goog.provide('foo.bar.CONSTANT');
 goog.provide('foo.bar.method');
 </code></pre>
-        <h5 id="appendices-legacy-exceptions-goog-scope">9.4.4.2 Aliasing with <code>goog.scope</code></h5>
+        <h5 id="appendices-legacy-exceptions-goog-scope">7.4.4.2 Aliasing with <code>goog.scope</code></h5>
         <p><strong><code>goog.scope</code> is deprecated. New files should not use <code>goog.scope</code> even in
             projects with existing goog.scope usage.</strong>
         </p>

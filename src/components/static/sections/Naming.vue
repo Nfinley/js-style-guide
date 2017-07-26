@@ -1,7 +1,7 @@
 <template>
     <div class="naming-container">
-        <h2 id="naming">6 Naming</h2>
-        <h3 id="naming-rules-common-to-all-identifiers">6.1 Rules common to all identifiers</h3>
+        <h2 id="naming">5 Naming</h2>
+        <h3 id="naming-rules-common-to-all-identifiers">5.1 Rules common to all identifiers</h3>
         <p>Identifiers use only ASCII letters and digits, and, in a small number of cases
             noted below, underscores and very rarely (when required by frameworks like
             Angular) dollar signs.
@@ -25,12 +25,12 @@ pcReader              // Lots of things can be abbreviated "pc".
 cstmrId               // Deletes internal letters.
 kSecondsPerDay        // Do not use Hungarian notation.
 </code></pre>
-        <h3 id="naming-rules-by-identifier-type">6.2 Rules by identifier type</h3>
-        <h4 id="naming-package-names">6.2.1 Package names</h4>
+        <h3 id="naming-rules-by-identifier-type">5.2 Rules by identifier type</h3>
+        <h4 id="naming-package-names">5.2.1 Package names</h4>
         <p>Package names are all <code>lowerCamelCase</code>. For example,
             <code>my.exampleCode.deepSpace</code>, but not <code class="badcode">my.examplecode.deepspace</code> or <code class="badcode">my.example_code.deep_space</code>.
         </p>
-        <h4 id="naming-class-names">6.2.2 Class names</h4>
+        <h4 id="naming-class-names">5.2.2 Class names</h4>
         <p>Class, interface, record, and typedef names are written in <code>UpperCamelCase</code>.
             Unexported classes are simply locals: they are not marked <code>@private</code> and
             therefore are not named with a trailing underscore.
@@ -39,7 +39,7 @@ kSecondsPerDay        // Do not use Hungarian notation.
             <code>ImmutableList</code>, or <code>VisibilityMode</code>.  Additionally, interface names may
             sometimes be adjectives or adjective phrases instead (for example, <code>Readable</code>).
         </p>
-        <h4 id="naming-method-names">6.2.3 Method names</h4>
+        <h4 id="naming-method-names">5.2.3 Method names</h4>
         <p>Method names are written in <code>lowerCamelCase</code>.  Private methods&#8217; names must end
             with a trailing underscore.
         </p>
@@ -53,18 +53,18 @@ kSecondsPerDay        // Do not use Hungarian notation.
             for example <code>testPop_emptyStack</code>. There is no One Correct Way to name test
             methods.
         </p>
-        <h4 id="naming-enum-names">6.2.4 Enum names</h4>
+        <h4 id="naming-enum-names">5.2.4 Enum names</h4>
         <p>Enum names are written in <code>UpperCamelCase</code>, similar to classes, and should
             generally be singular nouns.  Individual items within the enum are named in
             <code>CONSTANT_CASE</code>.
         </p>
-        <h4 id="naming-constant-names">6.2.5 Constant names</h4>
+        <h4 id="naming-constant-names">5.2.5 Constant names</h4>
         <p>Constant names use <code>CONSTANT_CASE</code>: all uppercase letters, with words separated
             by underscores. There is no reason for a constant to be named with a trailing
             underscore, since private static properties can be replaced by (implicitly
             private) module locals.
         </p>
-        <h5 id="naming-definition-of-constant">6.2.5.1 Definition of &#8220;constant&#8221;</h5>
+        <h5 id="naming-definition-of-constant">5.2.5.1 Definition of &#8220;constant&#8221;</h5>
         <p>Every constant is a <code>@const</code> static property or a module-local <code>const</code>
             declaration, but not all <code>@const</code> static properties and module-local <code>const</code>s
             are constants. Before choosing constant case, consider whether the field really
@@ -88,7 +88,7 @@ const Foo = goog.require('my.Foo');  // mirrors imported name
 const logger = log.getLogger('loggers.are.not.immutable');
 </code></pre>
         <p>Constants&#8217; names are typically nouns or noun phrases.</p>
-        <h5 id="naming-local-aliases">6.2.5.1 Local aliases</h5>
+        <h5 id="naming-local-aliases">5.2.5.1 Local aliases</h5>
         <p>Local aliases should be used whenever they improve readability over
             fully-qualified names.  Follow the same rules as <code>goog.require</code>s
             (<a href="#file-goog-require">??</a>), maintaining the last part of the aliased name.
@@ -99,14 +99,14 @@ const logger = log.getLogger('loggers.are.not.immutable');
 const CONSTANT_NAME = ImportedClass.CONSTANT_NAME;
 const {assert, assertInstanceof} = asserts;
 </code></pre>
-        <h4 id="naming-non-constant-field-names">6.2.6 Non-constant field names</h4>
+        <h4 id="naming-non-constant-field-names">5.2.6 Non-constant field names</h4>
         <p>Non-constant field names (static or otherwise) are written in <code>lowerCamelCase</code>,
             with a trailing underscore for private fields.
         </p>
         <p>These names are typically nouns or noun phrases. For example, <code>computedValues</code>
             or <code>index_</code>.
         </p>
-        <h4 id="naming-parameter-names">6.2.7 Parameter names</h4>
+        <h4 id="naming-parameter-names">5.2.7 Parameter names</h4>
         <p>Parameter names are written in <code>lowerCamelCase</code>.  Note that this applies even if
             the parameter expects a constructor.
         </p>
@@ -115,17 +115,17 @@ const {assert, assertInstanceof} = asserts;
             begin with a <code>$</code>.  This exception does not apply to any other identifiers
             (e.g. local variables or properties).
         </p>
-        <h4 id="naming-local-variable-names">6.2.8 Local variable names</h4>
+        <h4 id="naming-local-variable-names">5.2.8 Local variable names</h4>
         <p>Local variable names are written in <code>lowerCamelCase</code>, except for module-local
             (top-level) constants, as described above.  Constants in function scopes are
             still named in <code>lowerCamelCase</code>.  Note that lowerCamelCase applies even if the
             variable holds a constructor.
         </p>
-        <h4 id="naming-template-parameter-names">6.2.9 Template parameter names</h4>
+        <h4 id="naming-template-parameter-names">5.2.9 Template parameter names</h4>
         <p>Template parameter names should be concise, single-word or single-letter
             identifiers, and must be all-caps, such as <code>TYPE</code> or <code>THIS</code>.
         </p>
-        <h3 id="naming-camel-case-defined">6.3 Camel case: defined</h3>
+        <h3 id="naming-camel-case-defined">5.3 Camel case: defined</h3>
         <p>Sometimes there is more than one reasonable way to convert an English phrase
             into camel case, such as when acronyms or unusual constructs like <q>IPv6</q> or
             <q>iOS</q> are present. To improve predictability, {{ companyName }} Style specifies the

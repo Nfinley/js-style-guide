@@ -4,16 +4,10 @@
             1 Introduction
         </h2>
         <p>
-            This document serves as the <strong>complete</strong> definition of {{ companyName }}&#8217;s coding standards for source code in the JavaScript programming language. A JavaScript source file
-            is described as being <em>in {{ companyName }} Style</em> if and only if it adheres to the rules
-            herein.
+            This document serves as the <strong>complete</strong> definition of {{ companyName }}&#8217;s coding standards for source code in the JavaScript programming language. A JavaScript source file is described as being <em>in {{ companyName }} Style</em> if and only if it adheres to the rules herein.
         </p>
         <p>
-            Like other programming style guides, the issues covered span not only aesthetic
-            issues of formatting, but other types of conventions or coding standards as
-            well. However, this document focuses primarily on the hard-and-fast rules that
-            we follow universally, and avoids giving advice that isn't clearly enforceable
-            (whether by human or tool). 
+            Like other programming style guides, the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well. However, this document focuses primarily on the hard-and-fast rules that we follow universally, and avoids giving advice that isn't clearly enforceable (whether by human or tool). 
         </p>
         <h3 id="terminology-notes">
             1.1 Terminology notes
@@ -24,18 +18,15 @@
         <ol>
             <li>
                 <p>
-                    The term <em>comment</em> always refers to <em>implementation</em> comments. We do not use the phrase <q>documentation comments</q>, instead using the common term &#8220;JSDoc&#8221; for both human-readable text and machine-readable annotations within <code>/** &#8230; */</code>.
+                    The term <em>comment</em> always refers to <em>implementation</em> comments.
                 </p>
             </li>
             <li>
                 <p>
-                    This Style Guide uses <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a> terminology when using the phrases <em>must</em>, <em>must not</em>, <em>should</em>, <em>should not</em>, and <em>may</em>.  The terms <em>prefer</em> and <em>avoid</em> correspond to <em>should</em> and <em>should not</em>, respectively.  Imperative and declarative statements are prescriptive and correspond to <em>must</em>.
+                    This Style Guide uses <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a> terminology when using the phrases <em>must</em>, <em>must not</em>, <em>should</em>, <em>should not</em>, and <em>may</em>.  The terms <em>prefer</em> and <em>avoid</em> correspond to <em>should</em> and <em>should not</em>, respectively. Imperative and declarative statements are prescriptive and correspond to <em>must</em>.
                 </p>
             </li>
         </ol>
-        <p>
-            Other <q>terminology notes</q> will appear occasionally throughout the document.
-        </p>
         <h3 id="guide-notes">
             1.2 Guide notes
         </h3>

@@ -25,6 +25,9 @@
                 :companyName="companyName">
             </app-naming>
             <hr>
+            <app-react-jsx-guide
+                :companyName="companyName">
+            </app-react-jsx-guide>
             <app-policies
                 :companyName="companyName">
             </app-policies>
@@ -46,6 +49,7 @@
     import AppNaming from '../components/static/sections/Naming.vue'
     import AppPolicies from '../components/static/sections/Policies.vue'
     import AppAppendices from '../components/static/sections/Appendices.vue'
+    import AppReactJsxGuide from '../components/static/sections/ReactJsxGuide.vue'
 
     export default {
         props: ['companyName'],
@@ -57,7 +61,8 @@
             AppLanguageFeatures,
             AppNaming,
             AppPolicies,
-            AppAppendices
+            AppAppendices,
+            AppReactJsxGuide
         }
     }
 

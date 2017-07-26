@@ -7,9 +7,16 @@
             2.1 File name
         </h3>
         <p>
-            File names must be all lowercase and may include underscores (<code>_</code>) or dashes
-            (<code>-</code>), but no additional punctuation. Follow the convention that your project
-            uses. Filenames&#8217; extension must be <code>.js</code>.
+            Follow these file naming conventions:
+        </p>
+        <ol>
+            <li>File names must be all lowercase.</li>
+            <li>Dashes (<code>-</code>) only.</li>
+            <li>No numbers.</li>
+            <li>Camel case.</li>
+        </ol>
+        <p>
+            Follow the convention that your project uses. Filenames&#8217; extension must be <code>.js</code>.
         </p>
         <h3 id="file-encoding">
             2.2 File encoding: UTF-8
@@ -24,9 +31,7 @@
             2.3.1 Whitespace characters
         </h4>
         <p>
-            Aside from the line terminator sequence, the ASCII horizontal space character
-            (0x20) is the only whitespace character that appears anywhere in a source
-            file. This implies that
+            Aside from the line terminator sequence, the ASCII horizontal space character (0x20) is the only whitespace character that appears anywhere in a source file. This implies that
         </p>
         <ol>
             <li>
@@ -44,22 +49,16 @@
             2.3.2 Special escape sequences
         </h4>
         <p>
-            For any character that has a special escape sequence (<code>\'</code>, <code>\"</code>, <code>\\</code>, <code>\b</code>,
-            <code>\f</code>, <code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\v</code>), that sequence is used rather than the
-            corresponding numeric escape (e.g <code>\x0a</code>, <code>\u000a</code>, or <code>\u{a}</code>). Legacy octal
-            escapes are never used.
+            For any character that has a special escape sequence (<code>\'</code>, <code>\"</code>, <code>\\</code>, <code>\b</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\v</code>), that sequence is used rather than the corresponding numeric escape (e.g <code>\x0a</code>, <code>\u000a</code>, or <code>\u{a}</code>). Legacy octal escapes are never used.
         </p>
         <h4 id="non-ascii-characters">
             2.3.3 Non-ASCII characters
         </h4>
         <p>
-            For the remaining non-ASCII characters, either the actual Unicode character
-            (e.g. <code>&#8734;</code>) or the equivalent hex or Unicode escape (e.g. <code>\u221e</code>) is used,
-            depending only on which makes the code <strong>easier to read and understand</strong>.
+            For the remaining non-ASCII characters, either the actual Unicode character (e.g. <code>&#8734;</code>) or the equivalent hex or Unicode escape (e.g. <code>\u221e</code>) is used, depending only on which makes the code <strong>easier to read and understand</strong>.
         </p>
         <p>
-            Tip: In the Unicode escape case, and occasionally even when actual Unicode
-            characters are used, an explanatory comment can be very helpful.
+            Tip: In the Unicode escape case, and occasionally even when actual Unicode characters are used, an explanatory comment can be very helpful.
         </p>
         <table>
             <thead>
