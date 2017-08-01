@@ -20,6 +20,7 @@
 <script>
 
     import AppHome from './views/Home.vue'
+    import '../node_modules/code-prettify/loader/run_prettify.js'
 
     export default {
         name: 'app',
@@ -44,6 +45,7 @@
 
     @import "../node_modules/bulma/bulma.sass";
     @import "../node_modules/font-awesome/css/font-awesome.css";
+    @import "../node_modules/color-themes-for-google-code-prettify/dist/themes/tranquil-heart.min.css";
 
     .logo-container {
         display: flex;
