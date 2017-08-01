@@ -33,9 +33,7 @@
             </ul>
             <pre><code>const foo = [1, 2];<br>const bar = foo;<br><br>bar[0] = 9;<br>console.log(foo[0], bar[0]); // => 9, 9</code></pre>
         </guide-block>
-        <guide-block
-            id="references"
-            title="References">
+        <guide-block id="references" title="References">
             <p>
                 Use <code>const</code> for all your references; avoid using <code>var</code>.
             </p>
@@ -46,16 +44,12 @@ const b = 2;</code></pre>
             </p>
             <pre><code>// bad<br>var count = 1;<br>if (true) {<br>  count += 1;<br>}</code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="objects">
-                Objects
-            </h3>
+        <guide-block id="objects" title="Objects">
             <p>
                 <strong>Sub-title</strong>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="arrays">
@@ -66,7 +60,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="destructuring">
@@ -77,7 +70,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="strings">
@@ -88,7 +80,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="functions">
@@ -99,7 +90,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="arrow-functions">
@@ -110,7 +100,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="classes-and-constructors">
@@ -121,7 +110,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="modules">
@@ -132,7 +120,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="iterators-and-generators">
@@ -143,7 +130,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="properties">
@@ -154,7 +140,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="variables">
@@ -165,7 +150,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="hoisting">
@@ -176,7 +160,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="comparison-operators-and-equality">
@@ -187,7 +170,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="blocks">
@@ -198,7 +180,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="control-statements">
@@ -209,7 +190,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="comments">
@@ -220,7 +200,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="whitespace">
@@ -231,7 +210,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="commas">
@@ -242,7 +220,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="semicolons">
@@ -253,7 +230,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="type-casting-and-coercion">
@@ -264,7 +240,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="naming-conventions">
@@ -275,7 +250,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="accessors">
@@ -286,7 +260,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="events">
@@ -297,7 +270,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="es5-compatibility">
@@ -308,7 +280,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="es6-styles">
@@ -319,7 +290,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="testing">
@@ -330,7 +300,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
         <guide-block>
             <h3 id="performance">
@@ -341,7 +310,6 @@ const b = 2;</code></pre>
                 Text and instructions go here.
             </p>
             <pre><code></code></pre>
-            <hr>
         </guide-block>
     </div>
 </template>
@@ -354,12 +322,7 @@ const b = 2;</code></pre>
     export default {
         props: [],
         mounted() {
-            this.$el.querySelectorAll('h3').forEach(
-                heading => this.headings.push({
-                    id: heading.id,
-                    content: heading.innerHTML
-                })
-            )
+            
         },
         data() {
             return {
@@ -368,7 +331,7 @@ const b = 2;</code></pre>
         },
         computed: {
             dividedHeadings() {
-                return chunk(this.headings, 3)
+                return; // chunk(this.headings, 3)
             }
         },
         components: {
