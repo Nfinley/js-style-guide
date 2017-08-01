@@ -58,171 +58,179 @@ const b = 2;</code></pre>
             <p>
                 Use object method shorthand.
             </p>
-            <pre><code>// bad<br>const atom = {<br>    value: 1,<br><br>    addValue: function (value) {<br>        return atom.value + value;<br>    }<br>};</code></pre>
+            <pre><code>// bad<br>const atom = {<br>    value: 1,<br><br>    addValue: function (value) {<br>        return atom.value + value;<br>    }<br>};<br><br>// good<br>const atom = {<br>    value: 1,<br><br>    addValue(value) {<br>        return atom.value + value;<br>    }<br>};</code></pre>
+            <p>
+                Use property value shorthand.
+            </p>
+            <pre><code>const typography = 'Avenir';<br><br>// bad<br>const obj = {<br>    typography: typography<br>};<br><br>// good<br>const obj = {<br>    typography<br>};</code></pre>
+            <p>
+                Group your shorthand properties at the beginning of your object declaration.
+            </p>
+            <pre><code>const typeface = 'Avenir';<br>const category = 'Modern';<br><br>// bad<br>const obj = {<br>    fontWeight: 'bold',<br>    typeface,<br>    fontStyle: 'italic',<br>    category<br>};<br><br>// good<br>const obj = {<br>    category,<br>    typeface,<br>    fontWeight: 'bold',<br>    fontStyle: 'italic'<br>};</code></pre>
         </guide-block>
 
-        <guide-block id="arrays" title="Arrays">
+        <guide-block v-show="false" id="arrays" title="Arrays">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="destructuring" title="Destructuring">
+        <guide-block v-show="false" id="destructuring" title="Destructuring">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="strings" title="Strings">
+        <guide-block v-show="false" id="strings" title="Strings">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="functions" title="Functions">
+        <guide-block v-show="false" id="functions" title="Functions">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="arrow-functions" title="Arrow Functions">
+        <guide-block v-show="false" id="arrow-functions" title="Arrow Functions">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="classes-and-constructors" title="Classes & Constructors">
+        <guide-block v-show="false" id="classes-and-constructors" title="Classes & Constructors">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="modules" title="Modules">
+        <guide-block v-show="false" id="modules" title="Modules">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="iterators-and-generators" title="Iterators and Generators">
+        <guide-block v-show="false" id="iterators-and-generators" title="Iterators and Generators">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="properties" title="Properties">
+        <guide-block v-show="false" id="properties" title="Properties">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="variables" title="Variables">
+        <guide-block v-show="false" id="variables" title="Variables">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="hoisting" title="Hoisting">
+        <guide-block v-show="false" id="hoisting" title="Hoisting">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="comparison-operators-and-equality" title="Comparison Operators & Equality">
+        <guide-block v-show="false" id="comparison-operators-and-equality" title="Comparison Operators & Equality">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="blocks" title="Blocks">
+        <guide-block v-show="false" id="blocks" title="Blocks">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="control-statements" title="Control Statements">
+        <guide-block v-show="false" id="control-statements" title="Control Statements">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="comments" title="Comments">
+        <guide-block v-show="false" id="comments" title="Comments">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="whitespace" title="Whitespace">
+        <guide-block v-show="false" id="whitespace" title="Whitespace">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="commas" title="Commas">
+        <guide-block v-show="false" id="commas" title="Commas">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="semicolons" title="Semicolons">
+        <guide-block v-show="false" id="semicolons" title="Semicolons">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="type-casting-and-coercion" title="Type Casting & Coercion">
+        <guide-block v-show="false" id="type-casting-and-coercion" title="Type Casting & Coercion">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="naming-conventions" title="Naming Conventions">
+        <guide-block v-show="false" id="naming-conventions" title="Naming Conventions">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="accessors" title="Accessors">
+        <guide-block v-show="false" id="accessors" title="Accessors">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="events" title="Events">
+        <guide-block v-show="false" id="events" title="Events">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="testing" title="Testing">
+        <guide-block v-show="false" id="testing" title="Testing">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
 
-        <guide-block id="performance" title="Performance">
+        <guide-block v-show="false" id="performance" title="Performance">
             <p>
                 <strong>Sub-title</strong> - Text and instructions go here.
             </p>
