@@ -3,9 +3,9 @@
         <section class="section">
             <div class="logo-container">
                 <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
-                <h3 class="logo-tagline title is-3">
+                <h2 class="logo-tagline title is-2">
                     JavaScript Style Guide
-                </h3>
+                </h2>
             </div>
             <app-home :companyName="companyName"></app-home>
         </section>
@@ -48,7 +48,7 @@
     .logo-container {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
 
         .logo {
             margin-right: 14px;
