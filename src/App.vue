@@ -1,21 +1,13 @@
 <template>
     <div id="app">
         <section class="section">
-            <div class="columns">
-                <div class="column is-8 is-offset-2">
-                    <div class="logo-container">
-                        <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
-                        <h3 class="logo-tagline title is-3">
-                            JavaScript Style Guide
-                        </h3>
-                    </div>
-                </div>
+            <div class="logo-container">
+                <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
+                <h3 class="logo-tagline title is-3">
+                    JavaScript Style Guide
+                </h3>
             </div>
-            <div class="columns">
-                <div class="column is-8 is-offset-2">
-                    <app-home :companyName="companyName"></app-home>
-                </div>
-            </div>
+            <app-home :companyName="companyName"></app-home>
         </section>
         <section class="section fixed-to-top">
             <a class="button" href="#app">
@@ -56,6 +48,7 @@
     .logo-container {
         display: flex;
         align-items: center;
+        margin-bottom: 20px;
 
         .logo {
             margin-right: 14px;
