@@ -1,16 +1,16 @@
 <template>
     <div class="home-container content">
-        <guide-block>
+        <section>
             <table class="table">
                 <tbody>
                     <tr v-for="headingGroup in dividedHeadings">
                         <td v-for="(heading, idx) in headingGroup">
-                            <a :href="'#' + heading.id" v-html="heading.content"></a>
+                            <a :href="'#' + heading.id" v-html="heading.innerHTML"></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
-        </guide-block>
+        </section>
         <guide-block id="types" title="Types">
             <p id="types-primitive">
                 <strong>Primitives</strong> - When accessing a primitive type, always work directly with its value.
@@ -46,268 +46,163 @@ const b = 2;</code></pre>
         </guide-block>
         <guide-block id="objects" title="Objects">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="arrays">
-                Arrays
-            </h3>
+        <guide-block id="arrays" title="Arrays">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="destructuring">
-                Destructuring
-            </h3>
+        <guide-block id="destructuring" title="Destructuring">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="strings">
-                Strings
-            </h3>
+        <guide-block id="strings" title="Strings">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="functions">
-                Functions
-            </h3>
+        <guide-block id="functions" title="Functions">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="arrow-functions">
-                Arrow Functions
-            </h3>
+        <guide-block id="arrow-functions" title="Arrow Functions">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="classes-and-constructors">
-                Classes & Constructors
-            </h3>
+        <guide-block id="classes-and-constructors" title="Classes & Constructors">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="modules">
-                Modules
-            </h3>
+        <guide-block id="modules" title="Modules">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="iterators-and-generators">
-                Iterators and Generators
-            </h3>
+        <guide-block id="iterators-and-generators" title="Iterators and Generators">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="properties">
-                Properties
-            </h3>
+        <guide-block id="properties" title="Properties">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="variables">
-                Variables
-            </h3>
+        <guide-block id="variables" title="Variables">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="hoisting">
-                Hoisting
-            </h3>
+        <guide-block id="hoisting" title="Hoisting">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="comparison-operators-and-equality">
-                Comparison Operators & Equality
-            </h3>
+        <guide-block id="comparison-operators-and-equality" title="Comparison Operators & Equality">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="blocks">
-                Blocks
-            </h3>
+        <guide-block id="blocks" title="Blocks">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="control-statements">
-                Control Statements
-            </h3>
+        <guide-block id="control-statements" title="Control Statements">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="comments">
-                Comments
-            </h3>
+        <guide-block id="comments" title="Comments">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="whitespace">
-                Whitespace
-            </h3>
+        <guide-block id="whitespace" title="Whitespace">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="commas">
-                Commas
-            </h3>
+        <guide-block id="commas" title="Commas">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="semicolons">
-                Semicolons
-            </h3>
+        <guide-block id="semicolons" title="Semicolons">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="type-casting-and-coercion">
-                Type Casting & Coercion
-            </h3>
+        <guide-block id="type-casting-and-coercion" title="Type Casting & Coercion">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="naming-conventions">
-                Naming Conventions
-            </h3>
+        <guide-block id="naming-conventions" title="Naming Conventions">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="accessors">
-                Accessors
-            </h3>
+        <guide-block id="accessors" title="Accessors">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="events">
-                Events
-            </h3>
+        <guide-block id="events" title="Events">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="es5-compatibility">
-                ECMAScript 5 Compatibility
-            </h3>
+        <guide-block id="es5-compatibility" title="ECMAScript 5 Compatibility">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="es6-styles">
-                ECMAScript 6+ (ES 2015+) Styles
-            </h3>
+        <guide-block id="es6-styles" title="ECMAScript 6+ (ES 2015+) Styles">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="testing">
-                Testing
-            </h3>
+        <guide-block id="testing" title="Testing">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
-        <guide-block>
-            <h3 id="performance">
-                Performance
-            </h3>
+        <guide-block id="performance" title="Performance">
             <p>
-                <strong>Sub-title</strong>
-                Text and instructions go here.
+                <strong>Sub-title</strong> - Text and instructions go here.
             </p>
             <pre><code></code></pre>
         </guide-block>
@@ -317,12 +212,17 @@ const b = 2;</code></pre>
 <script>
     
     import GuideBlock from '../components/GuideBlock.vue'
-    import { chunk } from 'lodash'
+    import { chunk, has } from 'lodash'
 
     export default {
         props: [],
         mounted() {
-            
+            let tempArr = document.querySelectorAll('h3');
+            tempArr.forEach(tag => {
+                if (tag.id) {
+                    this.headings.push(tag)
+                }
+            })
         },
         data() {
             return {
@@ -331,7 +231,7 @@ const b = 2;</code></pre>
         },
         computed: {
             dividedHeadings() {
-                return; // chunk(this.headings, 3)
+                return chunk(this.headings, 3);
             }
         },
         components: {
