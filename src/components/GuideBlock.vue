@@ -10,7 +10,16 @@
 
 <script>
     export default {
-        props: ['id', 'title']
+        props: {
+            id: {
+                type: String,
+                required: true
+            },
+            title: {
+                type: String,
+                required: true
+            }
+        }
     }
 </script>
 
