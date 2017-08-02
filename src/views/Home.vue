@@ -15,7 +15,7 @@
             <div class="columns">
                 <div class="column is-6">
                     <p id="types-primitive">
-                        <strong>Primitives</strong> - When accessing a primitive type, always work directly with its value!
+                        <strong>Primitives</strong> - When accessing a primitive type, always work directly with its value
                     </p>
                     <ul>
                         <li>string</li>
@@ -32,7 +32,7 @@
             <div class="columns">
                 <div class="column is-6">
                     <p id="types-complex">
-                        <strong>Complex</strong> - When accessing a primitive type, always work directly with its value.
+                        <strong>Complex</strong> - When accessing a complex type, always work directly with its reference.
                     </p>
                     <ul>
                         <li>object</li>
