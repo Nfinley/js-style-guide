@@ -12,66 +12,66 @@ module.exports = {
     },
     module: {
         rules: [
-        {
-            test: /\.vue$/,
-            loader: 'vue-loader',
-            options: {
-                loaders: {
-                    'scss': 'vue-style-loader!css-loader!sass-loader',
-                    'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-                }
-            }
-        },
-        {
-            test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/
-        },
-        {
-            test: /\.s[ac]ss$/,
-            use: [
-            'style-loader',
-            'css-loader',
             {
-                loader: 'sass-loader',
+                test: /\.vue$/,
+                loader: 'vue-loader',
                 options: {
-                    includePaths: [
-                        path.resolve(__dirname, 'node_modules')
-                    ],
-                },
-            },
-            ],
-        },
-        {
-            test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-            loader: 'url-loader?limit=10000&mimetype=application/font-woff'
-        },
-        {
-            test: /\.(ttf|eot)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'file-loader',
-        },
-        {
-            test: /\.(png|jpg|gif|svg)$/,
-            loader: 'file-loader',
-            options: {
-                name: '[name].[ext]?[hash]'
-            }
-        },
-        {
-            test: /\.md$/,
-            use: [
-                {
-                    loader: 'html-loader'
-                },
-                {
-                    loader: 'markdown-loader',
-                    options: {
-                        pedantic: true,
-                        renderer
+                    loaders: {
+                        'scss': 'vue-style-loader!css-loader!sass-loader',
+                        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
                     }
                 }
-            ]
-        }
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: [
+                'style-loader',
+                'css-loader',
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        includePaths: [
+                            path.resolve(__dirname, 'node_modules')
+                        ],
+                    },
+                },
+                ],
+            },
+            {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+                loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+            },
+            {
+                test: /\.(ttf|eot)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader',
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]?[hash]'
+                }
+            },
+            {
+                test: /\.md$/,
+                use: [
+                    {
+                        loader: 'html-loader'
+                    },
+                    {
+                        loader: 'markdown-loader',
+                        options: {
+                            pedantic: true,
+                            renderer
+                        }
+                    }
+                ]
+            }
         ]
     },
     resolve: {
