@@ -6,7 +6,7 @@
 
 <script>
 
-    import javascriptMarkdown from '../data/javascript-guide.md'
+    import javascriptMarkdown from '../markdown/javascript-guide.md'
 
     export default {
         data() {

@@ -6,7 +6,7 @@
 
 <script>
 
-    import procedureMarkdown from '../data/procedure-guide.md'
+    import procedureMarkdown from '../markdown/procedure-guide.md'
 
     export default {
         data() {

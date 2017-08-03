@@ -6,7 +6,7 @@
 
 <script>
 
-    import reactMarkdown from '../data/react-guide.md'
+    import reactMarkdown from '../markdown/react-guide.md'
 
     export default {
         data() {
