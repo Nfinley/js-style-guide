@@ -1,13 +1,25 @@
 <template>
     <div id="app">
         <section class="section">
-            <div class="logo-container">
-                <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
-                <h2 class="logo-tagline title is-2">
-                    JavaScript Style Guide
-                </h2>
+            <div class="columns">
+                <div class="column is-8 is-offset-2">
+                    <div class="logo-container">
+                        <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
+                        <h2 class="logo-tagline title is-2">
+                            JavaScript Style Guide
+                        </h2>
+                    </div>
+                </div>
             </div>
-            <app-home :companyName="companyName"></app-home>
+            <div class="columns">
+                <div class="column is-8 is-offset-2">
+                    <transition
+                        name="fade"
+                        mode="out-in">
+                        <router-view></router-view>
+                    </transition>
+                </div>
+            </div>
         </section>
         <section class="section fixed-to-top">
             <a class="button" href="#app">
@@ -19,18 +31,13 @@
 
 <script>
 
-    import AppHome from './views/Home.vue'
+    import AppGuide from './views/Guide.vue'
     import '../node_modules/code-prettify/loader/run_prettify.js'
 
     export default {
         name: 'app',
-        data () {
-            return {
-                companyName: 'Texas NIC'
-            }
-        },
         components: {
-            AppHome
+            AppGuide
         }
     }
 
@@ -67,12 +74,6 @@
 
     .fade-enter, .fade-leave-active {
         opacity: 0;
-    }
-
-    .spaced-paragraphs {
-        p {
-            margin-bottom: 15px;
-        }
     }
 
     .fixed-to-top {

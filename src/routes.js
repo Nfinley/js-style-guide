@@ -1,8 +1,8 @@
-import Home from './views/Home.vue'
+import Guide from './views/Guide.vue'
 
 export const routes = [
     { 
         path: '/',
-        component: Home
+        component: Guide
     }
 ];
