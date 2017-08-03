@@ -2,7 +2,7 @@
     <div id="app">
         <section class="section">
             <div class="columns">
-                <div class="column is-8 is-offset-2">
+                <div class="column is-10 is-offset-1">
                     <div class="logo-container">
                         <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
                         <h2 class="logo-tagline title is-2">
@@ -12,7 +12,10 @@
                 </div>
             </div>
             <div class="columns">
-                <div class="column is-8 is-offset-2">
+                <div class="column is-2 is-offset-1">
+                    <app-sidebar></app-sidebar>
+                </div>
+                <div class="column is-7">
                     <transition
                         name="fade"
                         mode="out-in">
@@ -31,13 +34,15 @@
 
 <script>
 
-    import AppGuide from './views/Guide.vue'
     import '../node_modules/code-prettify/loader/run_prettify.js'
+    import AppSidebar from './components/Sidebar.vue'
 
     export default {
-        name: 'app',
+        mounted() {
+            document.querySelectorAll('pre').forEach(block => block.className += 'prettyprint');
+        },
         components: {
-            AppGuide
+            AppSidebar
         }
     }
 
@@ -81,6 +86,10 @@
         position: fixed;
         bottom: 0;
         right: 0;
+    }
+
+    pre {
+        border-radius: 4px;
     }
 
 </style>

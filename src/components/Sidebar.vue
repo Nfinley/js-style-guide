@@ -5,13 +5,20 @@
       </p>
       <ul class="menu-list">
         <li>
-          <router-link to="/">Home</router-link>
+          <router-link to="/">Javascript</router-link>
+        </li>
+        <li>
+          <router-link to="/react-guide">React</router-link>
+        </li>
+        <li>
+          <router-link to="/procedure-guide">Procedures</router-link>
         </li>
       </ul>
     </aside>
 </template>
 
 <script>
+
   import { routes } from '../routes'
 
   export default {

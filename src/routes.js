@@ -1,8 +1,18 @@
-import Guide from './views/Guide.vue'
+import JavaScriptGuide from './views/JavaScriptGuide.vue'
+import ReactGuide from './views/ReactGuide.vue'
+import ProcedureGuide from './views/ProcedureGuide.vue'
 
 export const routes = [
     { 
         path: '/',
-        component: Guide
+        component: JavaScriptGuide
+    },
+    { 
+        path: '/react-guide',
+        component: ReactGuide
+    },
+    { 
+        path: '/procedure-guide',
+        component: ProcedureGuide
     }
-];
+]
