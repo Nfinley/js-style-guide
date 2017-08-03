@@ -5,17 +5,18 @@
                 <div class="column is-10 is-offset-1">
                     <div class="logo-container">
                         <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
-                        <h2 class="logo-tagline title is-2">
-                            JavaScript Style Guide
+                        <h2 class="logo-tagline title is-2" @click="toggleAdjectiveInput">
+                            {{ adjective }} Guide
                         </h2>
                     </div>
+                    <input class="input" type="text" v-model="adjective" v-show="showAdjective" />
                 </div>
             </div>
             <div class="columns">
                 <div class="column is-2 is-offset-1">
                     <app-sidebar></app-sidebar>
                 </div>
-                <div class="column is-7">
+                <div class="column is-8">
                     <transition
                         name="fade"
                         mode="out-in">
@@ -40,6 +41,17 @@
     export default {
         mounted() {
             document.querySelectorAll('pre').forEach(block => block.className += 'prettyprint');
+        },
+        data() {
+            return {
+                adjective: 'JavaScript Style',
+                showAdjective: false
+            }
+        },
+        methods: {
+            toggleAdjectiveInput() {
+                this.showAdjective = !this.showAdjective;
+            }
         },
         components: {
             AppSidebar
