@@ -1185,151 +1185,151 @@ foo(() => {
 <a name="modules--use-them"></a><a name="10.1"></a>
 - [10.1](#modules--use-them) Always use modules (`import`/`export`) over a non-standard module system. You can always transpile to your preferred module system.
 
-> Why? Modules are the future, let’s start using the future now.
+    > Why? Modules are the future, let’s start using the future now.
 
-```javascript
-// bad
-const AirbnbStyleGuide = require('./AirbnbStyleGuide');
-module.exports = AirbnbStyleGuide.es6;
+    ```javascript
+    // bad
+    const AirbnbStyleGuide = require('./AirbnbStyleGuide');
+    module.exports = AirbnbStyleGuide.es6;
 
-// ok
-import AirbnbStyleGuide from './AirbnbStyleGuide';
-export default AirbnbStyleGuide.es6;
+    // ok
+    import AirbnbStyleGuide from './AirbnbStyleGuide';
+    export default AirbnbStyleGuide.es6;
 
-// best
-import { es6 } from './AirbnbStyleGuide';
-export default es6;
-```
+    // best
+    import { es6 } from './AirbnbStyleGuide';
+    export default es6;
+    ```
 
 <a name="modules--no-wildcard"></a><a name="10.2"></a>
 - [10.2](#modules--no-wildcard) Do not use wildcard imports.
 
-> Why? This makes sure you have a single default export.
+    > Why? This makes sure you have a single default export.
 
-```javascript
-// bad
-import * as AirbnbStyleGuide from './AirbnbStyleGuide';
+    ```javascript
+    // bad
+    import * as AirbnbStyleGuide from './AirbnbStyleGuide';
 
-// good
-import AirbnbStyleGuide from './AirbnbStyleGuide';
-```
+    // good
+    import AirbnbStyleGuide from './AirbnbStyleGuide';
+    ```
 
 <a name="modules--no-export-from-import"></a><a name="10.3"></a>
 - [10.3](#modules--no-export-from-import) And do not export directly from an import.
 
-> Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
+    > Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
 
-```javascript
-// bad
-// filename es6.js
-export { es6 as default } from './AirbnbStyleGuide';
+    ```javascript
+    // bad
+    // filename es6.js
+    export { es6 as default } from './AirbnbStyleGuide';
 
-// good
-// filename es6.js
-import { es6 } from './AirbnbStyleGuide';
-export default es6;
-```
+    // good
+    // filename es6.js
+    import { es6 } from './AirbnbStyleGuide';
+    export default es6;
+    ```
 
 <a name="modules--no-duplicate-imports"></a>
 - [10.4](#modules--no-duplicate-imports) Only import from a path in one place.
 eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
-> Why? Having multiple lines that import from the same path can make code harder to maintain.
+    > Why? Having multiple lines that import from the same path can make code harder to maintain.
 
-```javascript
-// bad
-import foo from 'foo';
-// … some other imports … //
-import { named1, named2 } from 'foo';
+    ```javascript
+    // bad
+    import foo from 'foo';
+    // … some other imports … //
+    import { named1, named2 } from 'foo';
 
-// good
-import foo, { named1, named2 } from 'foo';
+    // good
+    import foo, { named1, named2 } from 'foo';
 
-// good
-import foo, {
-  named1,
-  named2,
-} from 'foo';
-```
+    // good
+    import foo, {
+        named1,
+        named2,
+    } from 'foo';
+    ```
 
 <a name="modules--no-mutable-exports"></a>
 - [10.5](#modules--no-mutable-exports) Do not export mutable bindings.
 eslint: [`import/no-mutable-exports`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md)
-> Why? Mutation should be avoided in general, but in particular when exporting mutable bindings. While this technique may be needed for some special cases, in general, only constant references should be exported.
+    > Why? Mutation should be avoided in general, but in particular when exporting mutable bindings. While this technique may be needed for some special cases, in general, only constant references should be exported.
 
-```javascript
-// bad
-let foo = 3;
-export { foo };
+    ```javascript
+    // bad
+    let foo = 3;
+    export { foo };
 
-// good
-const foo = 3;
-export { foo };
-```
+    // good
+    const foo = 3;
+    export { foo };
+    ```
 
 <a name="modules--prefer-default-export"></a>
 - [10.6](#modules--prefer-default-export) In modules with a single export, prefer default export over named export.
 eslint: [`import/prefer-default-export`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
 
-```javascript
-// bad
-export function foo() {}
+    ```javascript
+    // bad
+    export function foo() {}
 
-// good
-export default function foo() {}
-```
+    // good
+    export default function foo() {}
+    ```
 
 <a name="modules--imports-first"></a>
 - [10.7](#modules--imports-first) Put all `import`s above non-import statements.
 eslint: [`import/first`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md)
-> Why? Since `import`s are hoisted, keeping them all at the top prevents surprising behavior.
+    > Why? Since `import`s are hoisted, keeping them all at the top prevents surprising behavior.
 
-```javascript
-// bad
-import foo from 'foo';
-foo.init();
+    ```javascript
+    // bad
+    import foo from 'foo';
+    foo.init();
 
-import bar from 'bar';
+    import bar from 'bar';
 
-// good
-import foo from 'foo';
-import bar from 'bar';
+    // good
+    import foo from 'foo';
+    import bar from 'bar';
 
-foo.init();
-```
+    foo.init();
+    ```
 
 <a name="modules--multiline-imports-over-newlines"></a>
 - [10.8](#modules--multiline-imports-over-newlines) Multiline imports should be indented just like multiline array and object literals.
 
-> Why? The curly braces follow the same indentation rules as every other curly brace block in the style guide, as do the trailing commas.
+    > Why? The curly braces follow the same indentation rules as every other curly brace block in the style guide, as do the trailing commas.
 
-```javascript
-// bad
-import {longNameA, longNameB, longNameC, longNameD, longNameE} from 'path';
+    ```javascript
+    // bad
+    import {longNameA, longNameB, longNameC, longNameD, longNameE} from 'path';
 
-// good
-import {
-  longNameA,
-  longNameB,
-  longNameC,
-  longNameD,
-  longNameE,
-} from 'path';
-```
+    // good
+    import {
+        longNameA,
+        longNameB,
+        longNameC,
+        longNameD,
+        longNameE,
+    } from 'path';
+    ```
 
 <a name="modules--no-webpack-loader-syntax"></a>
 - [10.9](#modules--no-webpack-loader-syntax) Disallow Webpack loader syntax in module import statements.
 eslint: [`import/no-webpack-loader-syntax`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md)
-> Why? Since using Webpack syntax in the imports couples the code to a module bundler. Prefer using the loader syntax in `webpack.config.js`.
+    > Why? Since using Webpack syntax in the imports couples the code to a module bundler. Prefer using the loader syntax in `webpack.config.js`.
 
-```javascript
-// bad
-import fooSass from 'css!sass!foo.scss';
-import barCss from 'style!css!bar.css';
+    ```javascript
+    // bad
+    import fooSass from 'css!sass!foo.scss';
+    import barCss from 'style!css!bar.css';
 
-// good
-import fooSass from 'foo.scss';
-import barCss from 'bar.css';
-```
+    // good
+    import fooSass from 'foo.scss';
+    import barCss from 'bar.css';
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1338,112 +1338,112 @@ import barCss from 'bar.css';
 <a name="iterators--nope"></a><a name="11.1"></a>
 - [11.1](#iterators--nope) Don’t use iterators. Prefer JavaScript’s higher-order functions instead of loops like `for-in` or `for-of`. eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator.html) [`no-restricted-syntax`](http://eslint.org/docs/rules/no-restricted-syntax)
 
-> Why? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side effects.
+    > Why? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side effects.
 
-> Use `map()` / `every()` / `filter()` / `find()` / `findIndex()` / `reduce()` / `some()` / ... to iterate over arrays, and `Object.keys()` / `Object.values()` / `Object.entries()` to produce arrays so you can iterate over objects.
+    > Use `map()` / `every()` / `filter()` / `find()` / `findIndex()` / `reduce()` / `some()` / ... to iterate over arrays, and `Object.keys()` / `Object.values()` / `Object.entries()` to produce arrays so you can iterate over objects.
 
-```javascript
-const numbers = [1, 2, 3, 4, 5];
+    ```javascript
+    const numbers = [1, 2, 3, 4, 5];
 
-// bad
-let sum = 0;
-for (let num of numbers) {
-  sum += num;
-}
-sum === 15;
+    // bad
+    let sum = 0;
+    for (let num of numbers) {
+        sum += num;
+    }
+    sum === 15;
 
-// good
-let sum = 0;
-numbers.forEach((num) => {
-  sum += num;
-});
-sum === 15;
+    // good
+    let sum = 0;
+    numbers.forEach((num) => {
+        sum += num;
+    });
+    sum === 15;
 
-// best (use the functional force)
-const sum = numbers.reduce((total, num) => total + num, 0);
-sum === 15;
+    // best (use the functional force)
+    const sum = numbers.reduce((total, num) => total + num, 0);
+    sum === 15;
 
-// bad
-const increasedByOne = [];
-for (let i = 0; i < numbers.length; i++) {
-  increasedByOne.push(numbers[i] + 1);
-}
+    // bad
+    const increasedByOne = [];
+    for (let i = 0; i < numbers.length; i++) {
+        increasedByOne.push(numbers[i] + 1);
+    }
 
-// good
-const increasedByOne = [];
-numbers.forEach((num) => {
-  increasedByOne.push(num + 1);
-});
+    // good
+    const increasedByOne = [];
+    numbers.forEach((num) => {
+        increasedByOne.push(num + 1);
+    });
 
-// best (keeping it functional)
-const increasedByOne = numbers.map(num => num + 1);
-```
+    // best (keeping it functional)
+    const increasedByOne = numbers.map(num => num + 1);
+    ```
 
 <a name="generators--nope"></a><a name="11.2"></a>
 - [11.2](#generators--nope) Don’t use generators for now.
 
-> Why? They don’t transpile well to ES5.
+    > Why? They don’t transpile well to ES5.
 
 <a name="generators--spacing"></a>
 - [11.3](#generators--spacing) If you must use generators, or if you disregard [our advice](#generators--nope), make sure their function signature is spaced properly. eslint: [`generator-star-spacing`](http://eslint.org/docs/rules/generator-star-spacing)
 
-> Why? `function` and `*` are part of the same conceptual keyword - `*` is not a modifier for `function`, `function*` is a unique construct, different from `function`.
+    > Why? `function` and `*` are part of the same conceptual keyword - `*` is not a modifier for `function`, `function*` is a unique construct, different from `function`.
 
-```javascript
-// bad
-function * foo() {
-  // ...
-}
+    ```javascript
+    // bad
+    function * foo() {
+        // ...
+    }
 
-// bad
-const bar = function * () {
-  // ...
-};
+    // bad
+    const bar = function * () {
+        // ...
+    };
 
-// bad
-const baz = function *() {
-  // ...
-};
+    // bad
+    const baz = function *() {
+        // ...
+    };
 
-// bad
-const quux = function*() {
-  // ...
-};
+    // bad
+    const quux = function*() {
+        // ...
+    };
 
-// bad
-function*foo() {
-  // ...
-}
+    // bad
+    function*foo() {
+        // ...
+    }
 
-// bad
-function *foo() {
-  // ...
-}
+    // bad
+    function *foo() {
+        // ...
+    }
 
-// very bad
-function
-*
-foo() {
-  // ...
-}
+    // very bad
+    function
+    *
+    foo() {
+        // ...
+    }
 
-// very bad
-const wat = function
-*
-() {
-  // ...
-};
+    // very bad
+    const wat = function
+    *
+    () {
+        // ...
+    };
 
-// good
-function* foo() {
-  // ...
-}
+    // good
+    function* foo() {
+        // ...
+    }
 
-// good
-const foo = function* () {
-  // ...
-};
-```
+    // good
+    const foo = function* () {
+        // ...
+    };
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1452,44 +1452,44 @@ const foo = function* () {
 <a name="properties--dot"></a><a name="12.1"></a>
 - [12.1](#properties--dot) Use dot notation when accessing properties. eslint: [`dot-notation`](http://eslint.org/docs/rules/dot-notation.html) jscs: [`requireDotNotation`](http://jscs.info/rule/requireDotNotation)
 
-```javascript
-const luke = {
-  jedi: true,
-  age: 28,
-};
+    ```javascript
+    const luke = {
+        jedi: true,
+        age: 28,
+    };
 
-// bad
-const isJedi = luke['jedi'];
+    // bad
+    const isJedi = luke['jedi'];
 
-// good
-const isJedi = luke.jedi;
-```
+    // good
+    const isJedi = luke.jedi;
+    ```
 
 <a name="properties--bracket"></a><a name="12.2"></a>
 - [12.2](#properties--bracket) Use bracket notation `[]` when accessing properties with a variable.
 
-```javascript
-const luke = {
-  jedi: true,
-  age: 28,
-};
+    ```javascript
+    const luke = {
+        jedi: true,
+        age: 28,
+    };
 
-function getProp(prop) {
-  return luke[prop];
-}
+    function getProp(prop) {
+        return luke[prop];
+    }
 
-const isJedi = getProp('jedi');
-```
+    const isJedi = getProp('jedi');
+    ```
 <a name="es2016-properties--exponentiation-operator"></a>
 - [12.3](#es2016-properties--exponentiation-operator) Use exponentiation operator `**` when calculating exponentiations. eslint: [`no-restricted-properties`](http://eslint.org/docs/rules/no-restricted-properties).
 
-```javascript
-// bad
-const binary = Math.pow(2, 10);
+    ```javascript
+    // bad
+    const binary = Math.pow(2, 10);
 
-// good
-const binary = 2 ** 10;
-```
+    // good
+    const binary = 2 ** 10;
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1498,167 +1498,167 @@ const binary = 2 ** 10;
 <a name="variables--const"></a><a name="13.1"></a>
 - [13.1](#variables--const) Always use `const` or `let` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that. eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef) [`prefer-const`](http://eslint.org/docs/rules/prefer-const)
 
-```javascript
-// bad
-superPower = new SuperPower();
+    ```javascript
+    // bad
+    superPower = new SuperPower();
 
-// good
-const superPower = new SuperPower();
-```
+    // good
+    const superPower = new SuperPower();
+    ```
 
 <a name="variables--one-const"></a><a name="13.2"></a>
 - [13.2](#variables--one-const) Use one `const` or `let` declaration per variable. eslint: [`one-var`](http://eslint.org/docs/rules/one-var.html) jscs: [`disallowMultipleVarDecl`](http://jscs.info/rule/disallowMultipleVarDecl)
 
-> Why? It’s easier to add new variable declarations this way, and you never have to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs. You can also step through each declaration with the debugger, instead of jumping through all of them at once.
+    > Why? It’s easier to add new variable declarations this way, and you never have to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs. You can also step through each declaration with the debugger, instead of jumping through all of them at once.
 
-```javascript
-// bad
-const items = getItems(),
-    goSportsTeam = true,
-    dragonball = 'z';
+    ```javascript
+    // bad
+    const items = getItems(),
+        goSportsTeam = true,
+        dragonball = 'z';
 
-// bad
-// (compare to above, and try to spot the mistake)
-const items = getItems(),
-    goSportsTeam = true;
-    dragonball = 'z';
+    // bad
+    // (compare to above, and try to spot the mistake)
+    const items = getItems(),
+        goSportsTeam = true;
+        dragonball = 'z';
 
-// good
-const items = getItems();
-const goSportsTeam = true;
-const dragonball = 'z';
-```
+    // good
+    const items = getItems();
+    const goSportsTeam = true;
+    const dragonball = 'z';
+    ```
 
 <a name="variables--const-let-group"></a><a name="13.3"></a>
 - [13.3](#variables--const-let-group) Group all your `const`s and then group all your `let`s.
 
-> Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
+    > Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
 
-```javascript
-// bad
-let i, len, dragonball,
-    items = getItems(),
-    goSportsTeam = true;
+    ```javascript
+    // bad
+    let i, len, dragonball,
+        items = getItems(),
+        goSportsTeam = true;
 
-// bad
-let i;
-const items = getItems();
-let dragonball;
-const goSportsTeam = true;
-let len;
+    // bad
+    let i;
+    const items = getItems();
+    let dragonball;
+    const goSportsTeam = true;
+    let len;
 
-// good
-const goSportsTeam = true;
-const items = getItems();
-let dragonball;
-let i;
-let length;
-```
+    // good
+    const goSportsTeam = true;
+    const items = getItems();
+    let dragonball;
+    let i;
+    let length;
+    ```
 
 <a name="variables--define-where-used"></a><a name="13.4"></a>
 - [13.4](#variables--define-where-used) Assign variables where you need them, but place them in a reasonable place.
 
-> Why? `let` and `const` are block scoped and not function scoped.
+    > Why? `let` and `const` are block scoped and not function scoped.
 
-```javascript
-// bad - unnecessary function call
-function checkName(hasName) {
-  const name = getName();
+    ```javascript
+    // bad - unnecessary function call
+    function checkName(hasName) {
+        const name = getName();
 
-  if (hasName === 'test') {
-    return false;
-  }
+        if (hasName === 'test') {
+            return false;
+        }
 
-  if (name === 'test') {
-    this.setName('');
-    return false;
-  }
+        if (name === 'test') {
+            this.setName('');
+            return false;
+        }
 
-  return name;
-}
+        return name;
+    }
 
-// good
-function checkName(hasName) {
-  if (hasName === 'test') {
-    return false;
-  }
+    // good
+    function checkName(hasName) {
+        if (hasName === 'test') {
+            return false;
+        }
 
-  const name = getName();
+        const name = getName();
 
-  if (name === 'test') {
-    this.setName('');
-    return false;
-  }
+        if (name === 'test') {
+            this.setName('');
+            return false;
+        }
 
-  return name;
-}
-```
+        return name;
+    }
+    ```
 <a name="variables--no-chain-assignment"></a><a name="13.5"></a>
 - [13.5](#variables--no-chain-assignment) Don’t chain variable assignments.
 
-> Why? Chaining variable assignments creates implicit global variables.
+    > Why? Chaining variable assignments creates implicit global variables.
 
-```javascript
-// bad
-(function example() {
-  // JavaScript interprets this as
-  // let a = ( b = ( c = 1 ) );
-  // The let keyword only applies to variable a; variables b and c become
-  // global variables.
-  let a = b = c = 1;
-}());
+    ```javascript
+    // bad
+    (function example() {
+        // JavaScript interprets this as
+        // let a = ( b = ( c = 1 ) );
+        // The let keyword only applies to variable a; variables b and c become
+        // global variables.
+        let a = b = c = 1;
+    }());
 
-console.log(a); // throws ReferenceError
-console.log(b); // 1
-console.log(c); // 1
+    console.log(a); // throws ReferenceError
+    console.log(b); // 1
+    console.log(c); // 1
 
-// good
-(function example() {
-  let a = 1;
-  let b = a;
-  let c = a;
-}());
+    // good
+    (function example() {
+        let a = 1;
+        let b = a;
+        let c = a;
+    }());
 
-console.log(a); // throws ReferenceError
-console.log(b); // throws ReferenceError
-console.log(c); // throws ReferenceError
+    console.log(a); // throws ReferenceError
+    console.log(b); // throws ReferenceError
+    console.log(c); // throws ReferenceError
 
-// the same applies for `const`
-```
+    // the same applies for `const`
+    ```
 
 <a name="variables--unary-increment-decrement"></a><a name="13.6"></a>
 - [13.6](#variables--unary-increment-decrement) Avoid using unary increments and decrements (++, --). eslint [`no-plusplus`](http://eslint.org/docs/rules/no-plusplus)
 
-> Why? Per the eslint documentation, unary increment and decrement statements are subject to automatic semicolon insertion and can cause silent errors with incrementing or decrementing values within an application. It is also more expressive to mutate your values with statements like `num += 1` instead of `num++` or `num ++`. Disallowing unary increment and decrement statements also prevents you from pre-incrementing/pre-decrementing values unintentionally which can also cause unexpected behavior in your programs.
+    > Why? Per the eslint documentation, unary increment and decrement statements are subject to automatic semicolon insertion and can cause silent errors with incrementing or decrementing values within an application. It is also more expressive to mutate your values with statements like `num += 1` instead of `num++` or `num ++`. Disallowing unary increment and decrement statements also prevents you from pre-incrementing/pre-decrementing values unintentionally which can also cause unexpected behavior in your programs.
 
-```javascript
-// bad
+    ```javascript
+    // bad
 
-const array = [1, 2, 3];
-let num = 1;
-num++;
---num;
+    const array = [1, 2, 3];
+    let num = 1;
+    num++;
+    --num;
 
-let sum = 0;
-let truthyCount = 0;
-for (let i = 0; i < array.length; i++) {
-  let value = array[i];
-  sum += value;
-  if (value) {
-    truthyCount++;
-  }
-}
+    let sum = 0;
+    let truthyCount = 0;
+    for (let i = 0; i < array.length; i++) {
+        let value = array[i];
+        sum += value;
+        if (value) {
+            truthyCount++;
+        }
+    }
 
-// good
+    // good
 
-const array = [1, 2, 3];
-let num = 1;
-num += 1;
-num -= 1;
+    const array = [1, 2, 3];
+    let num = 1;
+    num += 1;
+    num -= 1;
 
-const sum = array.reduce((a, b) => a + b, 0);
-const truthyCount = array.filter(Boolean).length;
-```
+    const sum = array.reduce((a, b) => a + b, 0);
+    const truthyCount = array.filter(Boolean).length;
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1667,97 +1667,97 @@ const truthyCount = array.filter(Boolean).length;
 <a name="hoisting--about"></a><a name="14.1"></a>
 - [14.1](#hoisting--about) `var` declarations get hoisted to the top of their scope, their assignment does not. `const` and `let` declarations are blessed with a new concept called [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let). It’s important to know why [typeof is no longer safe](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
 
-```javascript
-// we know this wouldn’t work (assuming there
-// is no notDefined global variable)
-function example() {
-  console.log(notDefined); // => throws a ReferenceError
-}
+    ```javascript
+    // we know this wouldn’t work (assuming there
+    // is no notDefined global variable)
+    function example() {
+        console.log(notDefined); // => throws a ReferenceError
+    }
 
-// creating a variable declaration after you
-// reference the variable will work due to
-// variable hoisting. Note: the assignment
-// value of `true` is not hoisted.
-function example() {
-  console.log(declaredButNotAssigned); // => undefined
-  var declaredButNotAssigned = true;
-}
+    // creating a variable declaration after you
+    // reference the variable will work due to
+    // variable hoisting. Note: the assignment
+    // value of `true` is not hoisted.
+    function example() {
+        console.log(declaredButNotAssigned); // => undefined
+        var declaredButNotAssigned = true;
+    }
 
-// the interpreter is hoisting the variable
-// declaration to the top of the scope,
-// which means our example could be rewritten as:
-function example() {
-  let declaredButNotAssigned;
-  console.log(declaredButNotAssigned); // => undefined
-  declaredButNotAssigned = true;
-}
+    // the interpreter is hoisting the variable
+    // declaration to the top of the scope,
+    // which means our example could be rewritten as:
+    function example() {
+        let declaredButNotAssigned;
+        console.log(declaredButNotAssigned); // => undefined
+        declaredButNotAssigned = true;
+    }
 
-// using const and let
-function example() {
-  console.log(declaredButNotAssigned); // => throws a ReferenceError
-  console.log(typeof declaredButNotAssigned); // => throws a ReferenceError
-  const declaredButNotAssigned = true;
-}
-```
+    // using const and let
+    function example() {
+        console.log(declaredButNotAssigned); // => throws a ReferenceError
+        console.log(typeof declaredButNotAssigned); // => throws a ReferenceError
+        const declaredButNotAssigned = true;
+    }
+    ```
 
 <a name="hoisting--anon-expressions"></a><a name="14.2"></a>
 - [14.2](#hoisting--anon-expressions) Anonymous function expressions hoist their variable name, but not the function assignment.
 
-```javascript
-function example() {
-  console.log(anonymous); // => undefined
+    ```javascript
+    function example() {
+        console.log(anonymous); // => undefined
 
-  anonymous(); // => TypeError anonymous is not a function
+        anonymous(); // => TypeError anonymous is not a function
 
-  var anonymous = function () {
-    console.log('anonymous function expression');
-  };
-}
-```
+        var anonymous = function () {
+            console.log('anonymous function expression');
+        };
+    }
+    ```
 
 <a name="hoisting--named-expresions"></a><a name="14.3"></a>
 - [14.3](#hoisting--named-expresions) Named function expressions hoist the variable name, not the function name or the function body.
 
-```javascript
-function example() {
-  console.log(named); // => undefined
+    ```javascript
+    function example() {
+        console.log(named); // => undefined
 
-  named(); // => TypeError named is not a function
+        named(); // => TypeError named is not a function
 
-  superPower(); // => ReferenceError superPower is not defined
+        superPower(); // => ReferenceError superPower is not defined
 
-  var named = function superPower() {
-    console.log('Flying');
-  };
-}
+        var named = function superPower() {
+            console.log('Flying');
+        };
+    }
 
-// the same is true when the function name
-// is the same as the variable name.
-function example() {
-  console.log(named); // => undefined
+    // the same is true when the function name
+    // is the same as the variable name.
+    function example() {
+        console.log(named); // => undefined
 
-  named(); // => TypeError named is not a function
+        named(); // => TypeError named is not a function
 
-  var named = function named() {
-    console.log('named');
-  };
-}
-```
+        var named = function named() {
+            console.log('named');
+        };
+    }
+    ```
 
 <a name="hoisting--declarations"></a><a name="14.4"></a>
 - [14.4](#hoisting--declarations) Function declarations hoist their name and the function body.
 
-```javascript
-function example() {
-  superPower(); // => Flying
+    ```javascript
+    function example() {
+        superPower(); // => Flying
 
-  function superPower() {
-    console.log('Flying');
-  }
-}
-```
+        function superPower() {
+            console.log('Flying');
+        }
+    }
+    ```
 
-- For more information refer to [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/) by [Ben Cherry](http://www.adequatelygood.com/).
+    - For more information refer to [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/) by [Ben Cherry](http://www.adequatelygood.com/).
 
 **[⬆ back to top](#table-of-contents)**
 
