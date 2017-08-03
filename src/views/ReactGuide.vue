@@ -1,6 +1,6 @@
 <template>
     <div class="react-guide-container content">
-        <div id="react-guide" v-html="contentMarkdown"></div>
+        <div id="react-guide" v-html="convertedMarkdown"></div>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
     export default {
         data() {
             return {
-                contentMarkdown: reactMarkdown
+                convertedMarkdown: reactMarkdown
             }
         }
     }

@@ -1,6 +1,6 @@
 <template>
     <div class="procedure-guide-container content">
-        <div id="procedure-guide" v-html="contentMarkdown"></div>
+        <div id="procedure-guide" v-html="convertedMarkdown"></div>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
     export default {
         data() {
             return {
-                contentMarkdown: procedureMarkdown
+                convertedMarkdown: procedureMarkdown
             }
         }
     }

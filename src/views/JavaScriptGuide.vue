@@ -1,6 +1,6 @@
 <template>
     <div class="javascript-guide-container content">
-        <div id="javascript-guide" v-html="contentMarkdown"></div>
+        <div id="javascript-guide" v-html="convertedMarkdown"></div>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
     export default {
         data() {
             return {
-                contentMarkdown: javascriptMarkdown
+                convertedMarkdown: javascriptMarkdown
             }
         }
     }
