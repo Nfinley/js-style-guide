@@ -30,16 +30,16 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/,
                 use: [
-                'style-loader',
-                'css-loader',
-                {
-                    loader: 'sass-loader',
-                    options: {
-                        includePaths: [
-                            path.resolve(__dirname, 'node_modules')
-                        ],
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: [
+                                path.resolve(__dirname, 'node_modules')
+                            ],
+                        },
                     },
-                },
                 ],
             },
             {
