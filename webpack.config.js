@@ -66,7 +66,13 @@ module.exports = {
                     {
                         loader: 'markdown-loader',
                         options: {
-                            pedantic: true,
+                            gfm: true,
+                            tables: false,
+                            breaks: true,
+                            pedantic: false,
+                            sanitize: false,
+                            smartLists: true,
+                            smartypants: true,
                             renderer
                         }
                     }
