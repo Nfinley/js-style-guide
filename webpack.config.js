@@ -67,7 +67,7 @@ module.exports = {
                         loader: 'markdown-loader',
                         options: {
                             gfm: true,
-                            tables: false,
+                            tables: true,
                             breaks: true,
                             pedantic: false,
                             sanitize: false,
