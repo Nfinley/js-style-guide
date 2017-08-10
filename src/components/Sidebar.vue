@@ -16,6 +16,9 @@
             <li>
                 <router-link to="/unit-testing-guide">Unit Testing</router-link>
             </li>
+            <li>
+                <a href="https://github.com/setholito/js-style-guide">GitHub</a>
+            </li>
         </ul>
     </aside>
 </template>
