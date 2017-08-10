@@ -11,19 +11,27 @@
 
 1. Clone Repository
 
-`git clone https://github.com/setholito/js-style-guide`
+```bash
+git clone https://github.com/setholito/js-style-guide
+```
 
-1. Change Directory
+2. Change Directory
 
-`cd js-style-guide`
+```bash
+cd js-style-guide
+```
 
-1. Install Dependencies
+3. Install Dependencies
 
-`npm install`
+```bash
+npm install
+```
 
-1. Run Application
+4. Run Application
 
-`npm run dev`
+```bash
+npm run dev
+```
 
 ### Pull Requests
 
