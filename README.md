@@ -1,18 +1,32 @@
-# JS Style Guide & More
+# JavaScript Style Guide & More
 
-> A Vue.js project
+### Contents
 
-## Build Setup
+* [JavaScript Style Guide](/src/markdown/javascript-guide.md)
+* [React Style Guide](/src/markdown/react-guide.md)
+* [Unit Testing Guide](/src/markdown/unit-testing-guide.md)
+* [Procedure Guide](/src/markdown/procedure-guide.md)
 
-``` bash
-# install dependencies
-npm install
+### Build Setup
 
-# serve with hot reload at localhost:8080
-npm run dev
+1. Clone Repository
 
-# build for production with minification
-npm run build
-```
+`git clone https://github.com/setholito/js-style-guide`
+
+1. Change Directory
+
+`cd js-style-guide`
+
+1. Install Dependencies
+
+`npm install`
+
+1. Run Application
+
+`npm run dev`
+
+### Pull Requests
+
+Please feel free to submit pull requests. We are always open to changes.
 
 Enjoy!

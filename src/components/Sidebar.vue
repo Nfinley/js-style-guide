@@ -11,10 +11,10 @@
                 <router-link to="/react-guide">React</router-link>
             </li>
             <li>
-                <router-link to="/procedure-guide">Procedures</router-link>
+                <router-link to="/unit-testing-guide">Unit Testing</router-link>
             </li>
             <li>
-                <router-link to="/unit-testing-guide">Unit Testing</router-link>
+                <router-link to="/procedure-guide">Procedures</router-link>
             </li>
             <li>
                 <a href="https://github.com/setholito/js-style-guide">GitHub</a>
