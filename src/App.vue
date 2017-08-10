@@ -6,10 +6,10 @@
                     <div class="logo-container">
                         <img class="logo" src="./assets/texas-nic-logo.svg" width="150">
                         <h2 class="logo-tagline title is-2" @click="toggleAdjectiveInput">
-                            {{ adjective }} Guide
+                            {{ guideTitle }}
                         </h2>
                     </div>
-                    <input class="input" type="text" v-model="adjective" v-show="showAdjective" />
+                    <input class="input" type="text" v-model="guideTitle" v-show="showGuideTitle" />
                 </div>
             </div>
             <div class="columns">
@@ -44,13 +44,13 @@
         },
         data() {
             return {
-                adjective: 'JavaScript Style',
-                showAdjective: false
+                guideTitle: 'Jupiter Io Standards',
+                showGuideTitle: false
             }
         },
         methods: {
             toggleAdjectiveInput() {
-                this.showAdjective = !this.showAdjective;
+                this.showGuideTitle = !this.showGuideTitle;
             }
         },
         components: {
@@ -69,7 +69,7 @@
 
     @import "../node_modules/bulma/bulma.sass";
     @import "../node_modules/font-awesome/css/font-awesome.css";
-    @import "../node_modules/color-themes-for-google-code-prettify/dist/themes/tranquil-heart.min.css";
+    // @import "../node_modules/color-themes-for-google-code-prettify/dist/themes/tranquil-heart.min.css";
 
     .logo-container {
         display: flex;
