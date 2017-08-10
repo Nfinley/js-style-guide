@@ -2,7 +2,7 @@
 
 Table of Contents:
 
-* Jest
+* [Jest](#jest)
 
 ### Jest
 
