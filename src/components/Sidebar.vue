@@ -5,7 +5,7 @@
         </p>
         <ul class="menu-list">
             <li>
-                <router-link to="/">Javascript</router-link>
+                <router-link to="/">JavaScript</router-link>
             </li>
             <li>
                 <router-link to="/react-guide">React</router-link>
