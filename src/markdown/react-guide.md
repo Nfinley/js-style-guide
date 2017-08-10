@@ -13,7 +13,6 @@
   1. [Quotes](#quotes)
   1. [Spacing](#spacing)
   1. [Props](#props)
-  1. [Refs](#refs)
   1. [Parentheses](#parentheses)
   1. [Tags](#tags)
   1. [Methods](#methods)
@@ -26,6 +25,8 @@
     - However, multiple [Stateless, or Pure, Components](https://facebook.github.io/react/docs/reusable-components.html#stateless-functions) are allowed per file. eslint: [`react/no-multi-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless).
   - Always use JSX syntax.
   - Do not use `React.createElement` unless you're initializing the app from a file that is not JSX.
+
+*** 
 
 ## Class vs `React.createClass` vs stateless
 
@@ -69,13 +70,17 @@
       return <div>{hello}</div>;
     }
     ```
-    **Comment: Let's discuss the above 
+    ####**Comment: Let's discuss the above as we currently do not name stateless functions this way.
+
+***
     
 ## Mixins
 
   - [Do not use mixins](https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html).
 
   > Why? Mixins introduce implicit dependencies, cause name clashes, and cause snowballing complexity. Most use cases for mixins can be accomplished in better ways via components, higher-order components, or utility modules.
+
+***
 
 ## Naming
 
@@ -148,6 +153,8 @@
     <MyComponent variant="fancy" />
     ```
 
+***
+
 ## Declaration
 
   - Do not use `displayName` for naming components. Instead, name the component by reference.
@@ -163,6 +170,8 @@
     export default class ReservationCard extends React.Component {
     }
     ```
+
+***
 
 ## Alignment
 
@@ -191,6 +200,8 @@
     </Foo>
     ```
 
+***
+
 ## Quotes
 
   - Always use double quotes (`"`) for JSX attributes, but single quotes (`'`) for all other JS. eslint: [`jsx-quotes`](http://eslint.org/docs/rules/jsx-quotes)
@@ -210,6 +221,8 @@
     // good
     <Foo style={{ left: '20px' }} />
     ```
+
+***
 
 ## Spacing
 
@@ -239,6 +252,8 @@
     // good
     <Foo bar={baz} />
     ```
+
+***
 
 ## Props
 
@@ -375,21 +390,7 @@
   };
   ```
 
-## Refs
-
-  - Always use ref callbacks. eslint: [`react/no-string-refs`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
-
-    ```jsx
-    // bad
-    <Foo
-      ref="myRef"
-    />
-
-    // good
-    <Foo
-      ref={(ref) => { this.myRef = ref; }}
-    />
-    ```
+***
 
 ## Parentheses
 
@@ -418,6 +419,7 @@
       return <MyComponent>{body}</MyComponent>;
     }
     ```
+***
 
 ## Tags
 
@@ -445,6 +447,7 @@
       baz="baz"
     />
     ```
+***
 
 ## Methods
 
@@ -500,7 +503,7 @@
     ```
 
   - Do not use underscore prefix for internal methods of a React component.
-    > Why? Underscore prefixes are sometimes used as a convention in other languages to denote privacy. But, unlike those languages, there is no native support for privacy in JavaScript, everything is public. Regardless of your intentions, adding underscore prefixes to your properties does not actually make them private, and any property (underscore-prefixed or not) should be treated as being public. See issues [#1024](https://github.com/airbnb/javascript/issues/1024), and [#490](https://github.com/airbnb/javascript/issues/490) for a more in-depth discussion.
+    > Why? Underscore prefixes are sometimes used as a convention in other languages to denote privacy. But, unlike those languages, there is no native support for privacy in JavaScript, everything is public. Regardless of your intentions, adding underscore prefixes to your properties does not actually make them private, and any property (underscore-prefixed or not) should be treated as being public.
 
     ```jsx
     // bad
@@ -535,6 +538,8 @@
       return (<div />);
     }
     ```
+    
+***    
 
 ## Ordering
 
@@ -586,6 +591,8 @@
 
     export default Link;
     ```
+    
+***
 
   - Ordering for `React.createClass`: eslint: [`react/sort-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)
 
@@ -611,8 +618,11 @@
   1. *optional render methods* like `renderNavigation()` or `renderProfilePicture()`
   1. `render`
 
-####**COMMENT: Should discuss and ADD alphabetically ordering Proptypes and imports. 
+***
 
+- Ordering for `PropTypes` should be in alphabetical order. eslint: [`react/sort-prop-types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md)
+ 
+***
 ## `isMounted`
 
   - Do not use `isMounted`. eslint: [`react/no-is-mounted`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
@@ -620,6 +630,8 @@
   > Why? [`isMounted` is an anti-pattern][anti-pattern], is not available when using ES6 classes, and is on its way to being officially deprecated.
 
   [anti-pattern]: https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html
+
+***
 
 ## Translation
 
