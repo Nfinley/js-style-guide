@@ -15,6 +15,11 @@
             </li>
             <li>
                 <router-link to="/procedure-guide">Procedures</router-link>
+                <ul>
+                    <li>
+                        <router-link to="/code-review-guide">Code Review</router-link>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="https://github.com/setholito/js-style-guide">GitHub</a>
