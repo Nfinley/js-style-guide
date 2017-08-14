@@ -6,6 +6,7 @@
 * [React Style Guide](/src/markdown/react-guide.md)
 * [Unit Testing Guide](/src/markdown/unit-testing-guide.md)
 * [Procedure Guide](/src/markdown/procedure-guide.md)
+  * [Code Review Guide](/src/markdown/code-review-guide.md)
 
 ### Build Setup
 
