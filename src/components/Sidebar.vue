@@ -4,7 +4,7 @@
             Standards
         </p>
         <ul class="menu-list">
-            <li>
+            <li v-show="false">
                 <router-link to="/">JavaScript</router-link>
             </li>
             <li>

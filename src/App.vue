@@ -69,7 +69,7 @@
 
     @import "../node_modules/bulma/bulma.sass";
     @import "../node_modules/font-awesome/css/font-awesome.css";
-    // @import "../node_modules/color-themes-for-google-code-prettify/dist/themes/tranquil-heart.min.css";
+    @import "../node_modules/color-themes-for-google-code-prettify/dist/themes/tranquil-heart.min.css";
 
     .logo-container {
         display: flex;
