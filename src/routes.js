@@ -7,7 +7,7 @@ import CodeReviewGuide from './views/CodeReviewGuide.vue'
 export const routes = [
     { 
         path: '/',
-        component: JavaScriptGuide
+        component: ReactGuide
     },
     { 
         path: '/react-guide',
