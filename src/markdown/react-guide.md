@@ -148,7 +148,34 @@
     // good
     <MyComponent variant="fancy" />
     ```
-
+  - **Function Naming**: Use descriptive language when naming functions inside React components. If function involves setting state or an event like a user click or onchange, include names that describe what the function is doing. E.g., use descriptors like `handle`, `onChange`, `submit`, `onClick`
+   
+   ```jsx
+    // bad
+    theChoices(event) {
+        let name = event,tartget.name
+        this.setState({choice: name});
+        }
+  
+    // good
+    handleChoiceOnChange(event) {
+        let name = event,tartget.name
+        this.setState({choice: name});
+        }
+        
+    // okay
+    updateForm(event) {
+        //Do stuff
+        }
+    
+    // good
+    handleFormSubmit(event) {
+        //Do stuff
+        }    
+              
+      ```
+  
+  
 ***
 
 ## Declaration
