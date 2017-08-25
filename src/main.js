@@ -1,3 +1,7 @@
+// Team Io Dev Guide
+// -------------------------
+// A project by Nigel Finley and Seth Davis of Texas NIC.
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App.vue'
@@ -11,7 +15,7 @@ const router = new Router({
 })
 
 new Vue({
-  el: '#app',
-  render: h => h(App),
-  router
+    el: '#app',
+    render: h => h(App),
+    router
 })
