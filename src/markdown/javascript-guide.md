@@ -71,7 +71,6 @@
     console.log(foo[0], bar[0]); // => 9, 9
     ```
 
-**[⬆ back to top](#table-of-contents)**
 
 ## References
 
@@ -121,8 +120,6 @@
     console.log(a); // ReferenceError
     console.log(b); // ReferenceError
     ```
-
-**[⬆ back to top](#table-of-contents)**
 
 ## Objects
 
@@ -296,7 +293,6 @@
     const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
     ```
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Arrays
 
@@ -435,7 +431,6 @@
   ];
   ```
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Destructuring
 
@@ -504,7 +499,6 @@
     const { left, top } = processInput(input);
     ```
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Strings
 
@@ -587,7 +581,7 @@
     const foo = `my name is '${name}'`;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Functions
 
@@ -868,7 +862,6 @@
     );
     ```
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Arrow Functions
 
@@ -1010,7 +1003,7 @@
     };
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Classes & Constructors
 
@@ -1175,7 +1168,7 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Modules
 
@@ -1329,7 +1322,7 @@
     import barCss from 'bar.css';
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Iterators and Generators
 
@@ -1443,7 +1436,7 @@
     };
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Properties
 
@@ -1489,7 +1482,7 @@
     const binary = 2 ** 10;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Variables
 
@@ -1658,7 +1651,7 @@
     const truthyCount = array.filter(Boolean).length;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Hoisting
 
@@ -1757,7 +1750,7 @@
 
   - For more information refer to [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/) by [Ben Cherry](http://www.adequatelygood.com/).
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Comparison Operators & Equality
 
@@ -1904,7 +1897,7 @@
     const baz = !c;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Blocks
 
@@ -1955,7 +1948,7 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Control Statements
 
@@ -2011,7 +2004,7 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Comments
 
@@ -2151,7 +2144,7 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+
 
 ## Whitespace
 
@@ -2477,8 +2470,6 @@
       .fail(() => console.log('You have failed this city.'));
     ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Commas
 
 <a name="commas--leading-trailing"></a><a name="19.1"></a>
@@ -2612,8 +2603,6 @@
     );
     ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Semicolons
 
   <a name="semicolons--required"></a><a name="20.1"></a>
@@ -2641,7 +2630,6 @@
 
     [Read more](https://stackoverflow.com/questions/7365172/semicolon-before-self-invoking-function/7365214%237365214).
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Type Casting & Coercion
 
@@ -2726,8 +2714,6 @@
     // best
     const hasAge = !!age;
     ```
-
-**[⬆ back to top](#table-of-contents)**
 
 ## Naming Conventions
 
@@ -2918,8 +2904,6 @@
     ];
     ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Accessors
 
   <a name="accessors--not-required"></a><a name="23.1"></a>
@@ -2987,8 +2971,6 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Events
 
   <a name="events--hash"></a><a name="24.1"></a>
@@ -3018,7 +3000,6 @@
     });
     ```
 
-  **[⬆ back to top](#table-of-contents)**
 
 ## jQuery
 
@@ -3087,14 +3068,11 @@
     $sidebar.find('ul').hide();
     ```
 
-**[⬆ back to top](#table-of-contents)**
-
 ## ECMAScript 5 Compatibility
 
   <a name="es5-compat--kangax"></a><a name="26.1"></a>
   - [27.1](#es5-compat--kangax) Refer to [Kangax](https://twitter.com/kangax/)’s ES5 [compatibility table](https://kangax.github.io/es5-compat-table/).
 
-**[⬆ back to top](#table-of-contents)**
 
 <a name="ecmascript-6-styles"></a>
 ## ECMAScript 6+ (ES 2015+) Styles
@@ -3122,7 +3100,6 @@
 
     > Why? [They are not finalized](https://tc39.github.io/process-document/), and they are subject to change or to be withdrawn entirely. We want to use JavaScript, and proposals are not JavaScript yet.
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Testing
 
@@ -3144,7 +3121,6 @@
     - 100% test coverage is a good goal to strive for, even if it’s not always practical to reach it.
     - Whenever you fix a bug, _write a regression test_. A bug fixed without a regression test is almost certainly going to break again in the future.
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Performance
 
@@ -3158,7 +3134,6 @@
   - [Are Javascript functions like `map()`, `reduce()`, and `filter()` optimized for traversing arrays?](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
   - Loading...
 
-**[⬆ back to top](#table-of-contents)**
 
 ## Resources
 
@@ -3177,7 +3152,6 @@
     - [JSCS](https://github.com/jscs-dev/node-jscs) - [Airbnb Style Preset](https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json) (Deprecated, please use [ESlint](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base))
   - Neutrino preset - [neutrino-preset-airbnb-base](https://neutrino.js.org/presets/neutrino-preset-airbnb-base/)
 
-**[⬆ back to top](#table-of-contents)**
 
 ## License
 
@@ -3203,5 +3177,3 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-**[⬆ back to top](#table-of-contents)**

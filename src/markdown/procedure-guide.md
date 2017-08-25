@@ -56,6 +56,7 @@ git checkout master # After you have tested and committed in your local branch S
 git merge <your-branch-name> # Merge your branch with master
 git pull # Get the latest commits from master (explicit) and fix conflicts if necessary
 mvn clean install # Clean-Install & run JEST & API unit-tests
+#DO A DESK CHECK BEFORE PUSHING NEW FEATURES
 git push origin master # Deploy your changes to the cloud
 git branch -d <your-branch-name> # Delete your branch locally
 ```
