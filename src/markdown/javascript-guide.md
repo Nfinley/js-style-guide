@@ -1,3 +1,5 @@
+# JavaScript Guide
+
 ## Table of Contents
 
   1. [Types](#types)
