@@ -68,7 +68,7 @@
       return <div>{hello}</div>;
     }
     ```
-    ####**Comment: Let's discuss the above as we currently do not name stateless functions this way.
+    
 
 ***
     
