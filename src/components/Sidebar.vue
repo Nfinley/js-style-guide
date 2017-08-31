@@ -5,24 +5,36 @@
         </p>
         <ul class="menu-list">
             <li v-show="false">
-                <router-link to="/">JavaScript</router-link>
+                <router-link to="/">
+                    JavaScript
+                </router-link>
             </li>
             <li>
-                <router-link to="/react-guide">React</router-link>
+                <router-link to="/react-guide">
+                    React
+                </router-link>
             </li>
             <li>
-                <router-link to="/unit-testing-guide">Unit Testing</router-link>
+                <router-link to="/unit-testing-guide">
+                    Unit Testing
+                </router-link>
             </li>
             <li>
-                <router-link to="/procedure-guide">Procedures</router-link>
+                <router-link to="/procedure-guide">
+                    Procedures
+                </router-link>
                 <ul>
                     <li>
-                        <router-link to="/code-review-guide">Code Review</router-link>
+                        <router-link to="/note-on-code-review">
+                            A Note on Code Review
+                        </router-link>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="https://github.com/setholito/js-style-guide">GitHub</a>
+                <a href="https://github.com/setholito/js-style-guide">
+                    GitHub
+                </a>
             </li>
         </ul>
     </aside>

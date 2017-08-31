@@ -2,7 +2,7 @@ import JavaScriptGuide from './views/JavaScriptGuide.vue'
 import ReactGuide from './views/ReactGuide.vue'
 import ProcedureGuide from './views/ProcedureGuide.vue'
 import UnitTestingGuide from './views/UnitTestingGuide.vue'
-import CodeReviewGuide from './views/CodeReviewGuide.vue'
+import NoteOnCodeReview from './views/NoteOnCodeReview.vue'
 
 export const routes = [
     { 
@@ -22,7 +22,7 @@ export const routes = [
         component: UnitTestingGuide
     },
     { 
-        path: '/code-review-guide',
-        component: CodeReviewGuide
+        path: '/note-on-code-review',
+        component: NoteOnCodeReview
     }
 ]

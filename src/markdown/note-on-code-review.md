@@ -1,4 +1,4 @@
-# Code Review Guide
+# A Note on Code Review
 
 ### Architecture / Design
 

@@ -6,7 +6,7 @@
 
 <script>
 
-    import codeReviewMarkdown from '../markdown/code-review-guide.md'
+    import codeReviewMarkdown from '../markdown/note-on-code-review.md'
 
     export default {
         data() {
