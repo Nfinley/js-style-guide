@@ -3,7 +3,7 @@
 ## Table of Contents
 
   1. [Basic Rules](#basic-rules)
-  1. [Class vs `React.createClass` vs stateless](#class-vs-react-createclass-vs-stateless)
+  1. [Class vs stateless](#class-vs-stateless)
   1. [Mixins](#mixins)
   1. [Naming](#naming)
   1. [Declaration](#declaration)
