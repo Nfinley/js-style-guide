@@ -169,4 +169,4 @@ describe('Reducer Name', () => {
 ```
 
 For more examples please see the Redux Testing documentation: [Redux Recipes](http://redux.js.org/docs/recipes/WritingTests.html).
-Great reference on how to test connected (to Redux via the connect function) components: Testing Connected Components](https://hackernoon.com/unit-testing-redux-connected-components-692fa3c4441c)
+Great reference on how to test connected (to Redux via the connect function) components: [Testing Connected Components](https://hackernoon.com/unit-testing-redux-connected-components-692fa3c4441c)
